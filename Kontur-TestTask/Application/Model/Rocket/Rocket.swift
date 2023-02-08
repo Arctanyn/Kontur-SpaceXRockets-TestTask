@@ -56,3 +56,13 @@ struct Rocket: Decodable {
         case id
     }
 }
+
+extension Rocket: Hashable {
+    static func == (lhs: Rocket, rhs: Rocket) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

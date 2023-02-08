@@ -1,5 +1,5 @@
 //
-//  RocketNameView.swift
+//  RockeHeaderView.swift
 //  Kontur-TestTask
 //
 //  Created by Малиль Дугулюбгов on 07.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RocketNameView: BaseView {
+final class RockeHeaderView: BaseView {
     
     //MARK: Views
     
@@ -52,9 +52,7 @@ final class RocketNameView: BaseView {
             rocketNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 40),
             rocketNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             rocketNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            
-            settingsButton.widthAnchor.constraint(equalToConstant: 30),
-            settingsButton.heightAnchor.constraint(equalTo: settingsButton.widthAnchor),
+
             settingsButton.centerYAnchor.constraint(equalTo: rocketNameLabel.centerYAnchor),
             settingsButton.leadingAnchor.constraint(greaterThanOrEqualTo: rocketNameLabel.trailingAnchor, constant: 20),
             settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)

@@ -8,6 +8,8 @@
 import UIKit
 
 protocol AssemblyBuilder {
-    func createRocketPagesModule() -> any PresentableView
+    func createRocketPagesModule(viewControllers: [UIViewController],
+                                 coordinator: ApplicationCoordinatorProtocol) -> any PresentableView
+    
     func createRocketInfoModule(rocket: Rocket) -> any PresentableView
 }

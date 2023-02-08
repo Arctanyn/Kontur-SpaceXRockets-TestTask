@@ -35,6 +35,16 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
         super.viewDidLoad()
         configure()
     }
+    
+    //MARK: - Methods
+    
+    func setupViewControllers(_ viewControllers: [UIViewController]) {
+        self.myViewControllers = viewControllers
+        
+        if !viewControllers.isEmpty {
+            setViewControllers([myViewControllers[0]], direction: .forward, animated: true)
+        }
+    }
 }
 
 //MARK: - Private methods

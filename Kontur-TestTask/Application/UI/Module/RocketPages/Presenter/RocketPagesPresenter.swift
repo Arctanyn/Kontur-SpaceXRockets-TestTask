@@ -6,5 +6,5 @@
 //
 
 protocol RocketPagesPresenter: AnyObject {
-    func fetchRocketsInfo()
+    func fetchRocketsInfo() async
 }

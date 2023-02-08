@@ -26,4 +26,8 @@ extension CoordinatorsFactoryImpl: CoordinatorsFactory {
     func createApplicationCoordinator(router: Router) -> ApplicationCoordinator {
         return ApplicationCoordinator(assemblyBuilder: assemblyBuilder, coordinatorsFactory: self, router: router)
     }
+    
+    func createRocketInfoCoordinator(router: Router) -> RocketInfoCoordinator {
+        RocketInfoCoordinatorImpl(assemblyBuilder: assemblyBuilder, coordinatorsFactory: self, router: router)
+    }
 }
