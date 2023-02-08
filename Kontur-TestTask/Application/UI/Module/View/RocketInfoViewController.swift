@@ -1,5 +1,5 @@
 //
-//  RocketViewController.swift
+//  RocketInfoViewController.swift
 //  Kontur-TestTask
 //
 //  Created by Малиль Дугулюбгов on 05.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RocketViewController: BaseViewController, PresentableView {
+final class RocketInfoViewController: BaseViewController, PresentableView {
 
     typealias Presenter = RocketPresenter
     
@@ -84,7 +84,7 @@ final class RocketViewController: BaseViewController, PresentableView {
 
 //MARK: - Private methods
 
-private extension RocketViewController {
+private extension RocketInfoViewController {
     func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
 
         UICollectionViewCompositionalLayout { [weak self] section, layoutEnvironment in
@@ -168,7 +168,7 @@ private extension RocketViewController {
 
 //MARK: - RocketViewControllerProtocol
 
-extension RocketViewController: RocketViewControllerProtocol {
+extension RocketInfoViewController: RocketViewControllerProtocol {
     func reloadData() {
 
     }
@@ -176,7 +176,7 @@ extension RocketViewController: RocketViewControllerProtocol {
 
 //MARK: - UIColletionViewDataSource
 
-extension RocketViewController: UICollectionViewDataSource {
+extension RocketInfoViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         guard let presenter else { return 0 }
         return presenter.numberOfSections

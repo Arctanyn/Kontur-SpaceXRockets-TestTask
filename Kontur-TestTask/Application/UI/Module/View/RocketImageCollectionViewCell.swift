@@ -11,12 +11,12 @@ final class RocketImageCollectionViewCell: BaseCollectionViewCell {
     
     //MARK: - Views
     
-    private let rocketNameView = RocketNameView()
+    private let rocketHeaderView = RockeHeaderView()
     
     private let rocketImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -30,19 +30,19 @@ final class RocketImageCollectionViewCell: BaseCollectionViewCell {
     
     override func setupSubviews() {
         addSubview(rocketImageView, useAutoLayout: true)
-        addSubview(rocketNameView, useAutoLayout: true)
+        addSubview(rocketHeaderView, useAutoLayout: true)
     }
     
     override func makeSubviewsLayout() {
         NSLayoutConstraint.activate([
             rocketImageView.topAnchor.constraint(equalTo: topAnchor),
             rocketImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            rocketNameView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            rocketImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             rocketImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            rocketNameView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            rocketNameView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            rocketNameView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            rocketHeaderView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            rocketHeaderView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            rocketHeaderView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

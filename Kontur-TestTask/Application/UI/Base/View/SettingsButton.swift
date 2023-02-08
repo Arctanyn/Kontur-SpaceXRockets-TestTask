@@ -41,7 +41,7 @@ private extension SettingsButton {
             settingsImageView.topAnchor.constraint(equalTo: topAnchor),
             settingsImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             settingsImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            settingsImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            settingsImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
