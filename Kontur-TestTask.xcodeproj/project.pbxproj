@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94113AD5299153FB00D72AA4 /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */; };
+		94113AD8299154A200D72AA4 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AD7299154A200D72AA4 /* UIView + Ext.swift */; };
+		94113ADC2991555500D72AA4 /* BaseViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113ADB2991555500D72AA4 /* BaseViewSetup.swift */; };
+		94113AE02991576A00D72AA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113ADF2991576A00D72AA4 /* BaseViewController.swift */; };
+		94113AE2299159F100D72AA4 /* RocketPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */; };
+		94113AE529915A4700D72AA4 /* RocketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE429915A4700D72AA4 /* RocketPresenter.swift */; };
+		94113AE929915B5200D72AA4 /* RocketViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */; };
+		94113AEB2991699100D72AA4 /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AEA2991699100D72AA4 /* PresentableView.swift */; };
+		94113AEE29916AE500D72AA4 /* AssemblyuBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AED29916AE500D72AA4 /* AssemblyuBuilderImpl.swift */; };
 		943BF7A3298FF24800B7F3C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7A2298FF24800B7F3C6 /* AppDelegate.swift */; };
 		943BF7A5298FF24800B7F3C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7A4298FF24800B7F3C6 /* SceneDelegate.swift */; };
-		943BF7A7298FF24800B7F3C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7A6298FF24800B7F3C6 /* ViewController.swift */; };
+		943BF7A7298FF24800B7F3C6 /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7A6298FF24800B7F3C6 /* RocketViewController.swift */; };
 		943BF7AC298FF24900B7F3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943BF7AB298FF24900B7F3C6 /* Assets.xcassets */; };
 		943BF7AF298FF24900B7F3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943BF7AD298FF24900B7F3C6 /* LaunchScreen.storyboard */; };
 		943BF7C3298FF47700B7F3C6 /* RocketAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7C2298FF47700B7F3C6 /* RocketAPIService.swift */; };
@@ -37,13 +46,57 @@
 		943BF80429900B3900B7F3C6 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7FC29900B3900B7F3C6 /* Reddit.swift */; };
 		943BF80629902A0300B7F3C6 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF80529902A0300B7F3C6 /* URLBuilder.swift */; };
 		943BF80829902CC500B7F3C6 /* URLBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */; };
+		9492692E2993BE740066E5E1 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492692D2993BE740066E5E1 /* DI.swift */; };
+		949269312993BED30066E5E1 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269302993BED30066E5E1 /* AppFactory.swift */; };
+		949269332993BF0F0066E5E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269322993BF0F0066E5E1 /* Coordinator.swift */; };
+		949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269342993BF5C0066E5E1 /* AssemblyBuilder.swift */; };
+		949269372993C34B0066E5E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269362993C34B0066E5E1 /* Router.swift */; };
+		949269392993C3650066E5E1 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269382993C3650066E5E1 /* Presentable.swift */; };
+		9492693C2993C3980066E5E1 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492693B2993C3980066E5E1 /* Closure.swift */; };
+		9492693E2993C4020066E5E1 /* RouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492693D2993C4020066E5E1 /* RouterImpl.swift */; };
+		949269402993C4310066E5E1 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492693F2993C4310066E5E1 /* BaseCoordinator.swift */; };
+		949269422993C4BF0066E5E1 /* CoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269412993C4BF0066E5E1 /* CoordinatorsFactory.swift */; };
+		949269452993C5320066E5E1 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269442993C5320066E5E1 /* ApplicationCoordinator.swift */; };
+		949269472993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269462993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift */; };
+		9492694B2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492694A2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift */; };
+		9492694D2993CADF0066E5E1 /* RocketPagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492694C2993CADF0066E5E1 /* RocketPagesPresenter.swift */; };
+		9492694F2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492694E2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift */; };
+		949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */; };
+		949DFE072992617200BE27A7 /* RocketInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE062992617200BE27A7 /* RocketInfoSection.swift */; };
+		949DFE0A2992791200BE27A7 /* RocketStageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE092992791200BE27A7 /* RocketStageCollectionViewCell.swift */; };
+		949DFE0D2992793700BE27A7 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */; };
+		949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */; };
+		949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */; };
+		949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */; };
+		94E6DC632992A1390088080C /* RocketNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC622992A1390088080C /* RocketNameView.swift */; };
+		94E6DC652992A1540088080C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC642992A1540088080C /* BaseView.swift */; };
+		94E6DC672992AE460088080C /* RocketImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */; };
+		94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC682992C1210088080C /* UIViewController + Ext.swift */; };
+		94E6DC6B2992C89F0088080C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6A2992C89F0088080C /* Unit.swift */; };
+		94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */; };
+		94E6DC6F2992CC110088080C /* CaseIterable + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */; };
+		94E6DC712992CCE00088080C /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC702992CCE00088080C /* SettingsButton.swift */; };
+		94E6DC742992D2B20088080C /* RocketImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */; };
+		94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC782992D3310088080C /* RocketSpecificationCellViewModel.swift */; };
+		94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */; };
+		94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */; };
+		94E6DC802992DA450088080C /* RocketPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
+		94113AD7299154A200D72AA4 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		94113ADB2991555500D72AA4 /* BaseViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewSetup.swift; sourceTree = "<group>"; };
+		94113ADF2991576A00D72AA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPresenterImpl.swift; sourceTree = "<group>"; };
+		94113AE429915A4700D72AA4 /* RocketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPresenter.swift; sourceTree = "<group>"; };
+		94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewControllerProtocol.swift; sourceTree = "<group>"; };
+		94113AEA2991699100D72AA4 /* PresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
+		94113AED29916AE500D72AA4 /* AssemblyuBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyuBuilderImpl.swift; sourceTree = "<group>"; };
 		943BF79F298FF24800B7F3C6 /* Kontur-TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kontur-TestTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		943BF7A2298FF24800B7F3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943BF7A4298FF24800B7F3C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		943BF7A6298FF24800B7F3C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		943BF7A6298FF24800B7F3C6 /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		943BF7AB298FF24900B7F3C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943BF7AE298FF24900B7F3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943BF7B0298FF24900B7F3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +125,41 @@
 		943BF7FC29900B3900B7F3C6 /* Reddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
 		943BF80529902A0300B7F3C6 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderImpl.swift; sourceTree = "<group>"; };
+		9492692D2993BE740066E5E1 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		949269302993BED30066E5E1 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		949269322993BF0F0066E5E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		949269342993BF5C0066E5E1 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		949269362993C34B0066E5E1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		949269382993C3650066E5E1 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		9492693B2993C3980066E5E1 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		9492693D2993C4020066E5E1 /* RouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImpl.swift; sourceTree = "<group>"; };
+		9492693F2993C4310066E5E1 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		949269412993C4BF0066E5E1 /* CoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactory.swift; sourceTree = "<group>"; };
+		949269442993C5320066E5E1 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		949269462993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFactoryImpl.swift; sourceTree = "<group>"; };
+		9492694A2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesPresenterImpl.swift; sourceTree = "<group>"; };
+		9492694C2993CADF0066E5E1 /* RocketPagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesPresenter.swift; sourceTree = "<group>"; };
+		9492694E2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesViewControllerProtocol.swift; sourceTree = "<group>"; };
+		949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Ext.swift"; sourceTree = "<group>"; };
+		949DFE062992617200BE27A7 /* RocketInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoSection.swift; sourceTree = "<group>"; };
+		949DFE092992791200BE27A7 /* RocketStageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCollectionViewCell.swift; sourceTree = "<group>"; };
+		949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSpecificationCollectionViewCell.swift; sourceTree = "<group>"; };
+		949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
+		949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		94E6DC622992A1390088080C /* RocketNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketNameView.swift; sourceTree = "<group>"; };
+		94E6DC642992A1540088080C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		94E6DC682992C1210088080C /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		94E6DC6A2992C89F0088080C /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
+		94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable + Ext.swift"; sourceTree = "<group>"; };
+		94E6DC702992CCE00088080C /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketImageCellViewModel.swift; sourceTree = "<group>"; };
+		94E6DC782992D3310088080C /* RocketSpecificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSpecificationCellViewModel.swift; sourceTree = "<group>"; };
+		94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCellViewModel.swift; sourceTree = "<group>"; };
+		94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCellViewModel.swift; sourceTree = "<group>"; };
+		94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +173,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94113AD62991547500D72AA4 /* UIKit + Ext */ = {
+			isa = PBXGroup;
+			children = (
+				94113AD7299154A200D72AA4 /* UIView + Ext.swift */,
+				94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */,
+				949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */,
+				94E6DC682992C1210088080C /* UIViewController + Ext.swift */,
+			);
+			path = "UIKit + Ext";
+			sourceTree = "<group>";
+		};
+		94113ADD2991574E00D72AA4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE0B2992792A00BE27A7 /* View */,
+				94113ADE2991575500D72AA4 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		94113ADE2991575500D72AA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94113ADF2991576A00D72AA4 /* BaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94113AE329915A0000D72AA4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */,
+				94113AE429915A4700D72AA4 /* RocketPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		94113AE629915AE200D72AA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94E6DC602992A04D0088080C /* CollectionView */,
+				943BF7A6298FF24800B7F3C6 /* RocketViewController.swift */,
+				94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		94113AE729915AF300D72AA4 /* RocketInfo */ = {
+			isa = PBXGroup;
+			children = (
+				94113AE629915AE200D72AA4 /* View */,
+				94113AE329915A0000D72AA4 /* Presenter */,
+			);
+			name = RocketInfo;
+			path = View;
+			sourceTree = "<group>";
+		};
+		94113AEC29916AD000D72AA4 /* CoreEntitiy */ = {
+			isa = PBXGroup;
+			children = (
+				9492692D2993BE740066E5E1 /* DI.swift */,
+				949269462993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift */,
+				94113AED29916AE500D72AA4 /* AssemblyuBuilderImpl.swift */,
+				9492693D2993C4020066E5E1 /* RouterImpl.swift */,
+				9492693F2993C4310066E5E1 /* BaseCoordinator.swift */,
+			);
+			path = CoreEntitiy;
+			sourceTree = "<group>";
+		};
 		943BF796298FF24800B7F3C6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				943BF7B8298FF35F00B7F3C6 /* AppFIle */,
+				94113AEC29916AD000D72AA4 /* CoreEntitiy */,
 				943BF7BC298FF3F900B7F3C6 /* Service */,
 				943BF7C4298FF48E00B7F3C6 /* Model */,
 				943BF7BB298FF3F200B7F3C6 /* UI */,
@@ -152,7 +310,8 @@
 		943BF7BA298FF3E800B7F3C6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				943BF7A6298FF24800B7F3C6 /* ViewController.swift */,
+				94E6DC7E2992DA240088080C /* RocketPages */,
+				94113AE729915AF300D72AA4 /* RocketInfo */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -160,6 +319,8 @@
 		943BF7BB298FF3F200B7F3C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				949269432993C50D0066E5E1 /* Coordinator */,
+				94113ADD2991574E00D72AA4 /* Base */,
 				943BF7BA298FF3E800B7F3C6 /* Module */,
 			);
 			path = UI;
@@ -177,7 +338,10 @@
 		943BF7BD298FF40600B7F3C6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				9492692F2993BE8A0066E5E1 /* Core */,
 				943BF7C0298FF44E00B7F3C6 /* Service */,
+				94113ADB2991555500D72AA4 /* BaseViewSetup.swift */,
+				94113AEA2991699100D72AA4 /* PresentableView.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -185,6 +349,8 @@
 		943BF7BE298FF41700B7F3C6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				94113AD62991547500D72AA4 /* UIKit + Ext */,
+				94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -192,6 +358,7 @@
 		943BF7BF298FF42700B7F3C6 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				9492693A2993C37B0066E5E1 /* Typealias */,
 				943BF7C1298FF45600B7F3C6 /* Enum */,
 				943BF7BD298FF40600B7F3C6 /* Protocol */,
 				943BF7BE298FF41700B7F3C6 /* Extension */,
@@ -212,6 +379,9 @@
 			isa = PBXGroup;
 			children = (
 				943BF7F12990046E00B7F3C6 /* HttpError.swift */,
+				949DFE062992617200BE27A7 /* RocketInfoSection.swift */,
+				94E6DC6A2992C89F0088080C /* Unit.swift */,
+				94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -257,6 +427,129 @@
 				943BF7FC29900B3900B7F3C6 /* Reddit.swift */,
 			);
 			path = RocketLaunch;
+			sourceTree = "<group>";
+		};
+		9492692F2993BE8A0066E5E1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				949269302993BED30066E5E1 /* AppFactory.swift */,
+				949269322993BF0F0066E5E1 /* Coordinator.swift */,
+				949269342993BF5C0066E5E1 /* AssemblyBuilder.swift */,
+				949269362993C34B0066E5E1 /* Router.swift */,
+				949269382993C3650066E5E1 /* Presentable.swift */,
+				949269412993C4BF0066E5E1 /* CoordinatorsFactory.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9492693A2993C37B0066E5E1 /* Typealias */ = {
+			isa = PBXGroup;
+			children = (
+				9492693B2993C3980066E5E1 /* Closure.swift */,
+			);
+			path = Typealias;
+			sourceTree = "<group>";
+		};
+		949269432993C50D0066E5E1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				949269442993C5320066E5E1 /* ApplicationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		949269482993CA6F0066E5E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */,
+				9492694E2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		949269492993CAA40066E5E1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9492694A2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift */,
+				9492694C2993CADF0066E5E1 /* RocketPagesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		949DFE08299278E100BE27A7 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				94E6DC722992D2940088080C /* RocketImageCell */,
+				94E6DC752992D2CD0088080C /* RocketSpecificationCell */,
+				94E6DC762992D2ED0088080C /* RocketInfoCell */,
+				94E6DC772992D3030088080C /* RocketStageCell */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		949DFE0B2992792A00BE27A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */,
+				94E6DC642992A1540088080C /* BaseView.swift */,
+				94E6DC702992CCE00088080C /* SettingsButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94E6DC602992A04D0088080C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */,
+				94E6DC622992A1390088080C /* RocketNameView.swift */,
+				949DFE08299278E100BE27A7 /* CollectionViewCell */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		94E6DC722992D2940088080C /* RocketImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */,
+				94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */,
+			);
+			name = RocketImageCell;
+			sourceTree = "<group>";
+		};
+		94E6DC752992D2CD0088080C /* RocketSpecificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */,
+				94E6DC782992D3310088080C /* RocketSpecificationCellViewModel.swift */,
+			);
+			name = RocketSpecificationCell;
+			sourceTree = "<group>";
+		};
+		94E6DC762992D2ED0088080C /* RocketInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */,
+				94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */,
+			);
+			name = RocketInfoCell;
+			sourceTree = "<group>";
+		};
+		94E6DC772992D3030088080C /* RocketStageCell */ = {
+			isa = PBXGroup;
+			children = (
+				949DFE092992791200BE27A7 /* RocketStageCollectionViewCell.swift */,
+				94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */,
+			);
+			name = RocketStageCell;
+			sourceTree = "<group>";
+		};
+		94E6DC7E2992DA240088080C /* RocketPages */ = {
+			isa = PBXGroup;
+			children = (
+				949269482993CA6F0066E5E1 /* View */,
+				949269492993CAA40066E5E1 /* Presenter */,
+			);
+			path = RocketPages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,33 +623,77 @@
 			buildActionMask = 2147483647;
 			files = (
 				943BF80329900B3900B7F3C6 /* Failure.swift in Sources */,
+				94113ADC2991555500D72AA4 /* BaseViewSetup.swift in Sources */,
 				943BF7C3298FF47700B7F3C6 /* RocketAPIService.swift in Sources */,
+				94113AD5299153FB00D72AA4 /* UITableViewCell + Ext.swift in Sources */,
+				949DFE0D2992793700BE27A7 /* BaseCollectionViewCell.swift in Sources */,
+				9492693C2993C3980066E5E1 /* Closure.swift in Sources */,
 				943BF7CD298FF7BC00B7F3C6 /* Thrust.swift in Sources */,
+				94E6DC802992DA450088080C /* RocketPagesViewController.swift in Sources */,
 				943BF7D1298FF80900B7F3C6 /* SecondStage.swift in Sources */,
 				943BF7D7298FF84A00B7F3C6 /* PayloadWeight.swift in Sources */,
 				943BF80029900B3900B7F3C6 /* RocketLaunch.swift in Sources */,
 				943BF7FD29900B3900B7F3C6 /* Core.swift in Sources */,
 				943BF7DD298FF8A000B7F3C6 /* CompositeFairing.swift in Sources */,
+				94113AE2299159F100D72AA4 /* RocketPresenterImpl.swift in Sources */,
+				94113AEE29916AE500D72AA4 /* AssemblyuBuilderImpl.swift in Sources */,
+				9492694D2993CADF0066E5E1 /* RocketPagesPresenter.swift in Sources */,
+				949269422993C4BF0066E5E1 /* CoordinatorsFactory.swift in Sources */,
 				943BF7FE29900B3900B7F3C6 /* Patch.swift in Sources */,
+				94113AEB2991699100D72AA4 /* PresentableView.swift in Sources */,
+				949DFE0A2992791200BE27A7 /* RocketStageCollectionViewCell.swift in Sources */,
+				94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */,
+				949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */,
 				943BF80129900B3900B7F3C6 /* Links.swift in Sources */,
 				943BF7D9298FF86700B7F3C6 /* Payloads.swift in Sources */,
+				94E6DC652992A1540088080C /* BaseView.swift in Sources */,
+				949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */,
+				94113AE02991576A00D72AA4 /* BaseViewController.swift in Sources */,
+				949DFE072992617200BE27A7 /* RocketInfoSection.swift in Sources */,
 				943BF80229900B3900B7F3C6 /* Flickr.swift in Sources */,
+				94E6DC712992CCE00088080C /* SettingsButton.swift in Sources */,
 				943BF7FF29900B3900B7F3C6 /* Fairings.swift in Sources */,
+				94113AD8299154A200D72AA4 /* UIView + Ext.swift in Sources */,
 				943BF7CB298FF7A600B7F3C6 /* Diameter.swift in Sources */,
+				949269472993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift in Sources */,
+				9492694B2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift in Sources */,
+				949269402993C4310066E5E1 /* BaseCoordinator.swift in Sources */,
 				943BF7DB298FF88300B7F3C6 /* Engines.swift in Sources */,
+				9492693E2993C4020066E5E1 /* RouterImpl.swift in Sources */,
 				943BF80829902CC500B7F3C6 /* URLBuilderImpl.swift in Sources */,
-				943BF7A7298FF24800B7F3C6 /* ViewController.swift in Sources */,
+				949269332993BF0F0066E5E1 /* Coordinator.swift in Sources */,
+				9492692E2993BE740066E5E1 /* DI.swift in Sources */,
+				943BF7A7298FF24800B7F3C6 /* RocketViewController.swift in Sources */,
+				94E6DC6B2992C89F0088080C /* Unit.swift in Sources */,
+				949269372993C34B0066E5E1 /* Router.swift in Sources */,
+				94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */,
 				943BF7D5298FF83200B7F3C6 /* Mass.swift in Sources */,
 				943BF7F02990037800B7F3C6 /* RocketAPIServiceImpl.swift in Sources */,
+				949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */,
+				94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */,
+				949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */,
 				943BF7F22990046E00B7F3C6 /* HttpError.swift in Sources */,
 				943BF7D3298FF82300B7F3C6 /* LandingLegs.swift in Sources */,
+				949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */,
 				943BF80629902A0300B7F3C6 /* URLBuilder.swift in Sources */,
+				949269452993C5320066E5E1 /* ApplicationCoordinator.swift in Sources */,
+				94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */,
+				949269312993BED30066E5E1 /* AppFactory.swift in Sources */,
+				94E6DC6F2992CC110088080C /* CaseIterable + Ext.swift in Sources */,
+				94113AE529915A4700D72AA4 /* RocketPresenter.swift in Sources */,
+				9492694F2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift in Sources */,
 				943BF7A3298FF24800B7F3C6 /* AppDelegate.swift in Sources */,
 				943BF7C6298FF4E500B7F3C6 /* Rocket.swift in Sources */,
+				94E6DC672992AE460088080C /* RocketImageCollectionViewCell.swift in Sources */,
 				943BF7C9298FF77700B7F3C6 /* ISP.swift in Sources */,
 				943BF80429900B3900B7F3C6 /* Reddit.swift in Sources */,
 				943BF7CF298FF7F000B7F3C6 /* FirstStage.swift in Sources */,
 				943BF7A5298FF24800B7F3C6 /* SceneDelegate.swift in Sources */,
+				94E6DC742992D2B20088080C /* RocketImageCellViewModel.swift in Sources */,
+				94E6DC632992A1390088080C /* RocketNameView.swift in Sources */,
+				94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */,
+				94113AE929915B5200D72AA4 /* RocketViewControllerProtocol.swift in Sources */,
+				949269392993C3650066E5E1 /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

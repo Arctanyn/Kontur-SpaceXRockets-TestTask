@@ -12,16 +12,12 @@ final class RocketAPIServiceImpl: RocketAPIService {
     //MARK: Properties
 
     private let session: URLSession
-    private let decoder: JSONDecoder
     private let urlBuilder: URLBuilder
     
     //MARK: - Initialization
 
-    init(session: URLSession = .shared,
-         decoder: JSONDecoder = .init(),
-         urlBuilder: URLBuilder) {
+    init(session: URLSession = .shared, urlBuilder: URLBuilder) {
         self.session = session
-        self.decoder = decoder
         self.urlBuilder = urlBuilder
     }
     

@@ -10,15 +10,16 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private var appFactory: AppFactory!
+    private var appCoordinator: Coordinator!
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        self.window = setupWindow(with: windowScene)
+        window?.overrideUserInterfaceStyle = .dark
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -52,3 +53,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+fileprivate extension SceneDelegate {
+    func setupWindow(with windowScene: UIWindowScene) -> UIWindow {
+        appFactory = DI()
+        let (window, coordinator) = appFactory.makeKeyWindowAndCoordinator(with: windowScene)
+        setupAppCoordinator(with: coordinator)
+        return window
+    }
+    
+    func setupAppCoordinator(with coordinator: Coordinator) {
+        appCoordinator = coordinator
+        appCoordinator.start(with: nil)
+    }
+}
