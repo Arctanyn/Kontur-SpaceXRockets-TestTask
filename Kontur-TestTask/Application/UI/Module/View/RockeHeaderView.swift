@@ -11,10 +11,16 @@ final class RockeHeaderView: BaseView {
     
     //MARK: Views
     
-    private let rocketNameLabel: UILabel = {
+    var rocketName = String() {
+        didSet {
+            rocketNameLabel.text = rocketName
+        }
+    }
+    
+    private lazy var rocketNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 30, weight: .medium)
-        label.text = "Rocket 1"
+        label.text = rocketName
         return label
     }()
     

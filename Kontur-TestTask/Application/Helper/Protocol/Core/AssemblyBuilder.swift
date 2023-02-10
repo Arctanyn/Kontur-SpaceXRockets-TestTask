@@ -9,7 +9,7 @@ import UIKit
 
 protocol AssemblyBuilder {
     func createRocketPagesModule(viewControllers: [UIViewController],
-                                 coordinator: ApplicationCoordinatorProtocol) -> any PresentableView
+                                 coordinator: RocketPagesCoordinator) -> any PresentableView
     
     func createRocketInfoModule(rocket: Rocket) -> any PresentableView
 }

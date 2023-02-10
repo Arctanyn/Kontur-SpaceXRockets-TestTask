@@ -7,5 +7,6 @@
 
 protocol CoordinatorsFactory {
     func createApplicationCoordinator(router: Router) -> ApplicationCoordinator
+    func createRocketPagesCoordinator(router: Router) -> RocketPagesCoordinator
     func createRocketInfoCoordinator(router: Router) -> RocketInfoCoordinator
 }

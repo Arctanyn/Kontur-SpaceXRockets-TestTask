@@ -7,23 +7,56 @@
 
 import UIKit
 
-final class RocketImageCollectionViewCell: BaseCollectionViewCell {
+extension CAGradientLayer {
+    static func smoothBackgroundShadow() -> CAGradientLayer {
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(0.8).cgColor,
+            UIColor.clear.cgColor,
+            UIColor.clear.cgColor,
+        ]
+        return gradient
+    }
+
+}
+
+final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
+    
+    private let shadowGradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(0.8).cgColor,
+            UIColor.clear.cgColor,
+            UIColor.clear.cgColor,
+        ]
+        return gradient
+    }()
     
     //MARK: - Views
     
     private let rocketHeaderView = RockeHeaderView()
     
-    private let rocketImageView: UIImageView = {
+    private lazy var rocketImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
+        imageView.backgroundColor = .tertiarySystemFill
+        imageView.layer.insertSublayer(shadowGradient, at: 0)
         return imageView
     }()
     
     //MARK: - Methods
     
-    func configure(with viewModel: RocketImageCellViewModel) {
-        rocketImageView.image = viewModel.image
+    func configure(with viewModel: RocketHeaderCellViewModel) {
+        rocketHeaderView.rocketName = viewModel.rocketName
+        
+        Task {
+            rocketImageView.image = await viewModel.fetchImage()
+        }
+    }
+    
+    override func layoutSubviews() {
+        shadowGradient.frame = rocketImageView.bounds
     }
     
     //MARK: - Overrided Methods

@@ -8,5 +8,5 @@
 struct RocketSpecificationCellViewModel {
     let value: String
     let specificationName: String
-    let unit: Unit
+    let unit: String
 }

@@ -24,15 +24,13 @@ final class RocketSpecificationCollectionViewCell: BaseCollectionViewCell {
     
     private let valueLabel: UILabel = {
         let label = UILabel()
-//        label.text = "180"
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .systemFont(ofSize: 17, weight: .bold)
         label.textAlignment = .center
         return label
     }()
     
     private let specificationNameLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Height, ft"
         label.font = .systemFont(ofSize: 15, weight: .medium)
         label.textColor = .secondaryLabel
         label.textAlignment = .center
@@ -43,7 +41,7 @@ final class RocketSpecificationCollectionViewCell: BaseCollectionViewCell {
     
     func configure(with viewModel: RocketSpecificationCellViewModel) {
         valueLabel.text = viewModel.value
-        specificationNameLabel.text = "\(viewModel.specificationName), \(viewModel.unit.name)"
+        specificationNameLabel.text = "\(viewModel.specificationName), \(viewModel.unit)"
     }
     
     //MARK: - Overrided Methods

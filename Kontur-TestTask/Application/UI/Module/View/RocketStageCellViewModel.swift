@@ -8,5 +8,5 @@
 struct RocketStageCellViewModel {
     let title: String
     let specification: String
-    let unit: Unit?
+    let unit: String?
 }

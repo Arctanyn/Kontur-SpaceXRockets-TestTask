@@ -13,24 +13,21 @@ final class RocketStageCollectionViewCell: BaseCollectionViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Title"
-        label.font = .systemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 17)
         label.textColor = .secondaryLabel
         return label
     }()
     
     private let specificationLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Specification"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.font = .systemFont(ofSize: 17, weight: .semibold)
         label.textAlignment = .right
         return label
     }()
     
     private let unitLabel: UILabel = {
         let label = UILabel()
-//        label.text = "ton"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.font = .systemFont(ofSize: 17, weight: .semibold)
         label.textColor = .secondaryLabel
         label.textAlignment = .right
         return label
@@ -42,7 +39,7 @@ final class RocketStageCollectionViewCell: BaseCollectionViewCell {
         titleLabel.text = viewModel.title
         specificationLabel.text = viewModel.specification
         
-        unitLabel.text = viewModel.unit?.name
+        unitLabel.text = viewModel.unit
         unitLabel.isHidden = viewModel.unit == nil
     }
     

@@ -23,13 +23,13 @@ enum SettingsOptions {
             return "Payload"
         }
     }
-    
-    var units: [Unit] {
-        switch self {
-        case .height, .diameter:
-            return [.meter, .feet]
-        case .mass, .payload:
-            return [.kilogram, .pound]
-        }
-    }
+//    
+//    var units: [Unit] {
+//        switch self {
+//        case .height, .diameter:
+//            return [.meter, .feet]
+//        case .mass, .payload:
+//            return [.kilogram, .pound]
+//        }
+//    }
 }

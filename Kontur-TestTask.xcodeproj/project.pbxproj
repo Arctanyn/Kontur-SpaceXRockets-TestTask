@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		940EF8F5299417A6008D28AC /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940EF8F4299417A6008D28AC /* DataDecoder.swift */; };
 		940EF8F729941836008D28AC /* DataDecoderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940EF8F629941836008D28AC /* DataDecoderImpl.swift */; };
-		940EF8FA29942272008D28AC /* ApplicationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940EF8F929942272008D28AC /* ApplicationCoordinatorProtocol.swift */; };
 		940EF8FC299425DA008D28AC /* RocketInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940EF8FB299425DA008D28AC /* RocketInfoCoordinator.swift */; };
 		940EF8FE29942617008D28AC /* RocketInfoCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940EF8FD29942617008D28AC /* RocketInfoCoordinatorImpl.swift */; };
 		94113AD5299153FB00D72AA4 /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */; };
@@ -51,6 +50,14 @@
 		943BF80429900B3900B7F3C6 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF7FC29900B3900B7F3C6 /* Reddit.swift */; };
 		943BF80629902A0300B7F3C6 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF80529902A0300B7F3C6 /* URLBuilder.swift */; };
 		943BF80829902CC500B7F3C6 /* URLBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */; };
+		9463C2362996B60400143193 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2352996B60400143193 /* Date + Ext.swift */; };
+		9463C2382996B61C00143193 /* DateFormatter + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2372996B61C00143193 /* DateFormatter + Ext.swift */; };
+		9463C23A2996B6E000143193 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2392996B6E000143193 /* String + Ext.swift */; };
+		9463C23E2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C23D2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift */; };
+		9463C2402996C0DB00143193 /* RocketPagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C23F2996C0DB00143193 /* RocketPagesCoordinator.swift */; };
+		9463C2452996D77300143193 /* LenghtUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2442996D77300143193 /* LenghtUnit.swift */; };
+		9463C2472996D78700143193 /* WeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2462996D78700143193 /* WeightUnit.swift */; };
+		9463C2492996D79000143193 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463C2482996D79000143193 /* TimeUnit.swift */; };
 		9492692E2993BE740066E5E1 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492692D2993BE740066E5E1 /* DI.swift */; };
 		949269312993BED30066E5E1 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269302993BED30066E5E1 /* AppFactory.swift */; };
 		949269332993BF0F0066E5E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949269322993BF0F0066E5E1 /* Coordinator.swift */; };
@@ -75,13 +82,12 @@
 		949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */; };
 		94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC622992A1390088080C /* RockeHeaderView.swift */; };
 		94E6DC652992A1540088080C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC642992A1540088080C /* BaseView.swift */; };
-		94E6DC672992AE460088080C /* RocketImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */; };
+		94E6DC672992AE460088080C /* RocketHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */; };
 		94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC682992C1210088080C /* UIViewController + Ext.swift */; };
-		94E6DC6B2992C89F0088080C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6A2992C89F0088080C /* Unit.swift */; };
 		94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */; };
 		94E6DC6F2992CC110088080C /* CaseIterable + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */; };
 		94E6DC712992CCE00088080C /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC702992CCE00088080C /* SettingsButton.swift */; };
-		94E6DC742992D2B20088080C /* RocketImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */; };
+		94E6DC742992D2B20088080C /* RocketHeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC732992D2B20088080C /* RocketHeaderCellViewModel.swift */; };
 		94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC782992D3310088080C /* RocketSpecificationCellViewModel.swift */; };
 		94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */; };
 		94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */; };
@@ -91,7 +97,6 @@
 /* Begin PBXFileReference section */
 		940EF8F4299417A6008D28AC /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		940EF8F629941836008D28AC /* DataDecoderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoderImpl.swift; sourceTree = "<group>"; };
-		940EF8F929942272008D28AC /* ApplicationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		940EF8FB299425DA008D28AC /* RocketInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCoordinator.swift; sourceTree = "<group>"; };
 		940EF8FD29942617008D28AC /* RocketInfoCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCoordinatorImpl.swift; sourceTree = "<group>"; };
 		94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
@@ -135,6 +140,14 @@
 		943BF7FC29900B3900B7F3C6 /* Reddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
 		943BF80529902A0300B7F3C6 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderImpl.swift; sourceTree = "<group>"; };
+		9463C2352996B60400143193 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
+		9463C2372996B61C00143193 /* DateFormatter + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter + Ext.swift"; sourceTree = "<group>"; };
+		9463C2392996B6E000143193 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		9463C23D2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesCoordinatorImpl.swift; sourceTree = "<group>"; };
+		9463C23F2996C0DB00143193 /* RocketPagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesCoordinator.swift; sourceTree = "<group>"; };
+		9463C2442996D77300143193 /* LenghtUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenghtUnit.swift; sourceTree = "<group>"; };
+		9463C2462996D78700143193 /* WeightUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnit.swift; sourceTree = "<group>"; };
+		9463C2482996D79000143193 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 		9492692D2993BE740066E5E1 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		949269302993BED30066E5E1 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		949269322993BF0F0066E5E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -159,13 +172,12 @@
 		949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		94E6DC622992A1390088080C /* RockeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockeHeaderView.swift; sourceTree = "<group>"; };
 		94E6DC642992A1540088080C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		94E6DC682992C1210088080C /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
-		94E6DC6A2992C89F0088080C /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable + Ext.swift"; sourceTree = "<group>"; };
 		94E6DC702992CCE00088080C /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
-		94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketImageCellViewModel.swift; sourceTree = "<group>"; };
+		94E6DC732992D2B20088080C /* RocketHeaderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHeaderCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC782992D3310088080C /* RocketSpecificationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSpecificationCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCellViewModel.swift; sourceTree = "<group>"; };
@@ -186,7 +198,7 @@
 		940EF8F829942264008D28AC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				940EF8F929942272008D28AC /* ApplicationCoordinatorProtocol.swift */,
+				9463C23F2996C0DB00143193 /* RocketPagesCoordinator.swift */,
 				940EF8FB299425DA008D28AC /* RocketInfoCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -199,6 +211,7 @@
 				94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */,
 				949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */,
 				94E6DC682992C1210088080C /* UIViewController + Ext.swift */,
+				9463C2392996B6E000143193 /* String + Ext.swift */,
 			);
 			path = "UIKit + Ext";
 			sourceTree = "<group>";
@@ -372,6 +385,8 @@
 			children = (
 				94113AD62991547500D72AA4 /* UIKit + Ext */,
 				94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */,
+				9463C2352996B60400143193 /* Date + Ext.swift */,
+				9463C2372996B61C00143193 /* DateFormatter + Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,9 +415,9 @@
 		943BF7C1298FF45600B7F3C6 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				9463C2432996D75D00143193 /* Unit */,
 				943BF7F12990046E00B7F3C6 /* HttpError.swift */,
 				949DFE062992617200BE27A7 /* RocketInfoSection.swift */,
-				94E6DC6A2992C89F0088080C /* Unit.swift */,
 				94E6DC6C2992CA5C0088080C /* SettingsOptions.swift */,
 			);
 			path = Enum;
@@ -451,6 +466,16 @@
 			path = RocketLaunch;
 			sourceTree = "<group>";
 		};
+		9463C2432996D75D00143193 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				9463C2442996D77300143193 /* LenghtUnit.swift */,
+				9463C2462996D78700143193 /* WeightUnit.swift */,
+				9463C2482996D79000143193 /* TimeUnit.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 		9492692F2993BE8A0066E5E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				949269442993C5320066E5E1 /* ApplicationCoordinator.swift */,
+				9463C23D2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift */,
 				940EF8FD29942617008D28AC /* RocketInfoCoordinatorImpl.swift */,
 			);
 			path = Coordinator;
@@ -533,8 +559,8 @@
 		94E6DC722992D2940088080C /* RocketImageCell */ = {
 			isa = PBXGroup;
 			children = (
-				94E6DC662992AE460088080C /* RocketImageCollectionViewCell.swift */,
-				94E6DC732992D2B20088080C /* RocketImageCellViewModel.swift */,
+				94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */,
+				94E6DC732992D2B20088080C /* RocketHeaderCellViewModel.swift */,
 			);
 			name = RocketImageCell;
 			sourceTree = "<group>";
@@ -657,16 +683,19 @@
 				943BF7D1298FF80900B7F3C6 /* SecondStage.swift in Sources */,
 				943BF7D7298FF84A00B7F3C6 /* PayloadWeight.swift in Sources */,
 				943BF80029900B3900B7F3C6 /* RocketLaunch.swift in Sources */,
+				9463C2492996D79000143193 /* TimeUnit.swift in Sources */,
 				943BF7FD29900B3900B7F3C6 /* Core.swift in Sources */,
 				943BF7DD298FF8A000B7F3C6 /* CompositeFairing.swift in Sources */,
 				94113AE2299159F100D72AA4 /* RocketPresenterImpl.swift in Sources */,
 				94113AEE29916AE500D72AA4 /* AssemblyuBuilderImpl.swift in Sources */,
+				9463C2472996D78700143193 /* WeightUnit.swift in Sources */,
 				9492694D2993CADF0066E5E1 /* RocketPagesPresenter.swift in Sources */,
 				949269422993C4BF0066E5E1 /* CoordinatorsFactory.swift in Sources */,
 				943BF7FE29900B3900B7F3C6 /* Patch.swift in Sources */,
 				94113AEB2991699100D72AA4 /* PresentableView.swift in Sources */,
 				949DFE0A2992791200BE27A7 /* RocketStageCollectionViewCell.swift in Sources */,
 				94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */,
+				9463C2382996B61C00143193 /* DateFormatter + Ext.swift in Sources */,
 				949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */,
 				943BF80129900B3900B7F3C6 /* Links.swift in Sources */,
 				943BF7D9298FF86700B7F3C6 /* Payloads.swift in Sources */,
@@ -676,9 +705,12 @@
 				94113AE02991576A00D72AA4 /* BaseViewController.swift in Sources */,
 				949DFE072992617200BE27A7 /* RocketInfoSection.swift in Sources */,
 				943BF80229900B3900B7F3C6 /* Flickr.swift in Sources */,
+				9463C23A2996B6E000143193 /* String + Ext.swift in Sources */,
+				9463C2362996B60400143193 /* Date + Ext.swift in Sources */,
 				94E6DC712992CCE00088080C /* SettingsButton.swift in Sources */,
 				943BF7FF29900B3900B7F3C6 /* Fairings.swift in Sources */,
 				94113AD8299154A200D72AA4 /* UIView + Ext.swift in Sources */,
+				9463C2452996D77300143193 /* LenghtUnit.swift in Sources */,
 				943BF7CB298FF7A600B7F3C6 /* Diameter.swift in Sources */,
 				949269472993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift in Sources */,
 				9492694B2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift in Sources */,
@@ -689,12 +721,12 @@
 				949269332993BF0F0066E5E1 /* Coordinator.swift in Sources */,
 				9492692E2993BE740066E5E1 /* DI.swift in Sources */,
 				943BF7A7298FF24800B7F3C6 /* RocketInfoViewController.swift in Sources */,
-				94E6DC6B2992C89F0088080C /* Unit.swift in Sources */,
 				949269372993C34B0066E5E1 /* Router.swift in Sources */,
 				94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */,
 				943BF7D5298FF83200B7F3C6 /* Mass.swift in Sources */,
 				940EF8FE29942617008D28AC /* RocketInfoCoordinatorImpl.swift in Sources */,
 				943BF7F02990037800B7F3C6 /* RocketAPIServiceImpl.swift in Sources */,
+				9463C23E2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift in Sources */,
 				949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */,
 				94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */,
 				949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */,
@@ -702,7 +734,6 @@
 				943BF7D3298FF82300B7F3C6 /* LandingLegs.swift in Sources */,
 				949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */,
 				943BF80629902A0300B7F3C6 /* URLBuilder.swift in Sources */,
-				940EF8FA29942272008D28AC /* ApplicationCoordinatorProtocol.swift in Sources */,
 				949269452993C5320066E5E1 /* ApplicationCoordinator.swift in Sources */,
 				94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */,
 				949269312993BED30066E5E1 /* AppFactory.swift in Sources */,
@@ -711,13 +742,14 @@
 				9492694F2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift in Sources */,
 				943BF7A3298FF24800B7F3C6 /* AppDelegate.swift in Sources */,
 				943BF7C6298FF4E500B7F3C6 /* Rocket.swift in Sources */,
-				94E6DC672992AE460088080C /* RocketImageCollectionViewCell.swift in Sources */,
+				94E6DC672992AE460088080C /* RocketHeaderCollectionViewCell.swift in Sources */,
 				943BF7C9298FF77700B7F3C6 /* ISP.swift in Sources */,
 				943BF80429900B3900B7F3C6 /* Reddit.swift in Sources */,
 				940EF8F729941836008D28AC /* DataDecoderImpl.swift in Sources */,
 				943BF7CF298FF7F000B7F3C6 /* FirstStage.swift in Sources */,
+				9463C2402996C0DB00143193 /* RocketPagesCoordinator.swift in Sources */,
 				943BF7A5298FF24800B7F3C6 /* SceneDelegate.swift in Sources */,
-				94E6DC742992D2B20088080C /* RocketImageCellViewModel.swift in Sources */,
+				94E6DC742992D2B20088080C /* RocketHeaderCellViewModel.swift in Sources */,
 				94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */,
 				94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */,
 				94113AE929915B5200D72AA4 /* RocketViewControllerProtocol.swift in Sources */,
@@ -865,6 +897,7 @@
 				INFOPLIST_FILE = "Kontur-TestTask/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -896,6 +929,7 @@
 				INFOPLIST_FILE = "Kontur-TestTask/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

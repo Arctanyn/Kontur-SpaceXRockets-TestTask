@@ -15,7 +15,7 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
     
     //MARK: - Methods
     
-    func createRocketPagesModule(viewControllers: [UIViewController], coordinator: ApplicationCoordinatorProtocol) -> any PresentableView {
+    func createRocketPagesModule(viewControllers: [UIViewController], coordinator: RocketPagesCoordinator) -> any PresentableView {
         let view = RocketPagesViewController()
         view.presenter = RocketPagesPresenterImpl(
             view: view,
@@ -31,8 +31,7 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
         let view = RocketInfoViewController()
         let presenter = RocketPresenterImpl(
             rocket: rocket,
-            view: view,
-            rocketAPIService: RocketAPIServiceImpl(urlBuilder: URLBuilderImpl())
+            view: view
         )
         view.presenter = presenter
         return view

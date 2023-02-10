@@ -13,16 +13,14 @@ class RocketInfoCollectionViewCell: BaseCollectionViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Title"
-        label.font = .systemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 17)
         label.textColor = .secondaryLabel
         return label
     }()
     
     private let infoLabel: UILabel = {
         let label = UILabel()
-//        label.text = "Info"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.font = .systemFont(ofSize: 17, weight: .semibold)
         label.textAlignment = .right
         return label
     }()

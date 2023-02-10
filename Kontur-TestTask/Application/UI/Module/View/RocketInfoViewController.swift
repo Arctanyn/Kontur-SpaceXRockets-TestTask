@@ -44,7 +44,7 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
             withReuseIdentifier: CollectionViewHeaderReusableView.identifier
         )
         
-        collectionView.register(RocketImageCollectionViewCell.self, forCellWithReuseIdentifier: RocketImageCollectionViewCell.identifier)
+        collectionView.register(RocketHeaderCollectionViewCell.self, forCellWithReuseIdentifier: RocketHeaderCollectionViewCell.identifier)
 
         collectionView.register(
             RocketSpecificationCollectionViewCell.self,
@@ -196,27 +196,43 @@ extension RocketInfoViewController: UICollectionViewDataSource {
         switch rocketInfoSection {
         case .rocketImage:
             let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: RocketImageCollectionViewCell.identifier,
+                withReuseIdentifier: RocketHeaderCollectionViewCell.identifier,
                 for: indexPath
-            ) as! RocketImageCollectionViewCell
+            ) as! RocketHeaderCollectionViewCell
+            cell.configure(with: presenter.viewModelForRocketHeader())
             return cell
         case .specifications:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketSpecificationCollectionViewCell.identifier,
                 for: indexPath
             ) as! RocketSpecificationCollectionViewCell
+            
+            if let cellViewModel = presenter.viewModelForSpecificationCell(at: indexPath) {
+                cell.configure(with: cellViewModel)
+            }
+            
             return cell
         case .general:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketInfoCollectionViewCell.identifier,
                 for: indexPath
             ) as! RocketInfoCollectionViewCell
+            
+            if let cellViewModel = presenter.viewModelForGeneralInfoCell(at: indexPath) {
+                cell.configure(with: cellViewModel)
+            }
+            
             return cell
         case .firstStage, .secondStage:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketStageCollectionViewCell.identifier,
                 for: indexPath
             ) as! RocketStageCollectionViewCell
+            
+            if let cellViewModel = presenter.viewModelForStageInfoCell(at: indexPath) {
+                cell.configure(with: cellViewModel)
+            }
+            
             return cell
         }
     }

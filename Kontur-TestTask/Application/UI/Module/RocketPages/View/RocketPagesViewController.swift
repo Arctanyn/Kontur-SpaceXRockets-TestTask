@@ -8,7 +8,7 @@
 import UIKit
 
 final class RocketPagesViewController: UIPageViewController, PresentableView {
-
+    
     typealias Presenter = RocketPagesPresenter
     
     //MARK: Properties
@@ -16,6 +16,15 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
     var presenter: Presenter!
     
     private var myViewControllers = [UIViewController]()
+    
+    //MARK: - Views
+    
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.frame = CGRect(origin: .zero, size: .zero)
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
     
     //MARK: - Initialization
     
@@ -34,6 +43,11 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        setupSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        loadingIndicator.center = view.center
     }
     
     //MARK: - Methods
@@ -49,11 +63,15 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
 
 //MARK: - Private methods
 
- extension RocketPagesViewController {
+extension RocketPagesViewController {
     func configure() {
         dataSource = self
     }
-
+    
+    func setupSubviews() {
+        view.addSubview(loadingIndicator)
+    }
+    
     func findIndex(of viewController: UIViewController) -> Int? {
         myViewControllers.firstIndex(of: viewController)
     }
@@ -62,7 +80,13 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
 //MARK: - RocketPagesViewControllerProtocol
 
 extension RocketPagesViewController: RocketPagesViewControllerProtocol {
+    func startLoadingInficator() {
+        loadingIndicator.startAnimating()
+    }
     
+    func stopLoadingIndicator() {
+        loadingIndicator.stopAnimating()
+    }
 }
 
 //MARK: - UIPageViewControllerDataSource
@@ -72,14 +96,14 @@ extension RocketPagesViewController: UIPageViewControllerDataSource {
         guard let index = findIndex(of: viewController) else {
             return nil
         }
-        return index == 0 ? nil : myViewControllers[index - 1]
+        return index == 0 ? myViewControllers.last : myViewControllers[index - 1]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = findIndex(of: viewController) else {
             return nil
         }
-        return viewController == myViewControllers.last ? nil : myViewControllers[index + 1]
+        return viewController == myViewControllers.last ? myViewControllers.first : myViewControllers[index + 1]
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
