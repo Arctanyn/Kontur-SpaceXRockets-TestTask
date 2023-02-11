@@ -23,8 +23,13 @@ final class CoordinatorsFactoryImpl {
 //MARK: - CoordinatorsFactory
 
 extension CoordinatorsFactoryImpl: CoordinatorsFactory {
-    func createApplicationCoordinator(router: Router) -> ApplicationCoordinator {
-        return ApplicationCoordinator(assemblyBuilder: assemblyBuilder, coordinatorsFactory: self, router: router)
+    func createApplicationCoordinator(router: Router, settings: Settings) -> ApplicationCoordinator {
+        return ApplicationCoordinator(
+            assemblyBuilder: assemblyBuilder,
+            coordinatorsFactory: self,
+            router: router,
+            settings: settings
+        )
     }
     
     func createRocketPagesCoordinator(router: Router) -> RocketPagesCoordinator {

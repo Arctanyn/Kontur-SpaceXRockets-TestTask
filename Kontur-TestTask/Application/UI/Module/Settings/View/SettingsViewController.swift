@@ -91,7 +91,12 @@ extension SettingsViewController: UITableViewDataSource {
         }
         
         if let option = presenter.settingOptionForCell(at: indexPath) {
-            cell.configure(with: option)
+            let index = presenter.selectedIndexForCell(with: option)
+            cell.configure(with: option, selectedIndex: index)
+        }
+        
+        cell.didChangeUnit = { [weak self] settingOption, segmentedControlIndex in
+            self?.presenter.saveSetting(forOption: settingOption, withUnitIndex: segmentedControlIndex)
         }
         
         return cell

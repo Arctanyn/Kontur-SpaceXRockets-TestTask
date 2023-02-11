@@ -12,39 +12,59 @@ final class RocketInfoPresenterImpl {
     //MARK: Properties
     
     private var heightUnit: LenghtUnit {
-        return .meter
+        settings.getLenthUnit(forOption: .height)
     }
     
     private var diameterUnit: LenghtUnit {
-        return .meter
+        settings.getLenthUnit(forOption: .diameter)
     }
     
     private var massUnit: WeightUnit {
-        return .kilogram
+        settings.getWeightUnit(forOption: .mass)
     }
     
     private var payloadUnit: WeightUnit {
-        return .kilogram
+        settings.getWeightUnit(forOption: .payload)
     }
     
     private let rocket: Rocket
     private unowned let view: RocketViewControllerProtocol
+    private let settings: Settings
     private let coordinator: RocketInfoCoordinator
     
     //MARK: - Initialization
     
     init(rocket: Rocket,
          view: RocketViewControllerProtocol,
+         settings: Settings,
          coordinator: RocketInfoCoordinator) {
         self.rocket = rocket
         self.view = view
+        self.settings = settings
         self.coordinator = coordinator
+        addSettingsObserver()
+    }
+    
+    //MARK: - Deinitialization
+    
+    deinit {
+        removeSettingsObserver()
     }
 }
 
 //MARK: - Private
 
 private extension RocketInfoPresenterImpl {
+    func addSettingsObserver() {
+        NotificationCenter.default.addObserver(forName: .settingsUpdate, object: nil, queue: .main) { [view] _ in
+            view.reloadData(in: IndexSet(integer: RocketInfoSection.specifications.rawValue))
+        }
+    }
+    
+    func removeSettingsObserver() {
+        NotificationCenter.default.removeObserver(self, name: .settingsUpdate, object: nil)
+    }
+    
     func makeSpecificationViewModel(for specification: RocketSpecification) -> RocketSpecificationCellViewModel {
         let name = specification.title
         var value = String()

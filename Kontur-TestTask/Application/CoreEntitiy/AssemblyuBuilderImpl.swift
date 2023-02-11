@@ -32,6 +32,7 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
         let presenter = RocketInfoPresenterImpl(
             rocket: rocket,
             view: view,
+            settings: di.settings,
             coordinator: coordinator
         )
         view.presenter = presenter
@@ -42,6 +43,7 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
         let view = SettingsViewController()
         view.presenter = SettingsPresenterImpl(
             view: view,
+            settings: di.settings,
             coordinator: coordinator
         )
         return view

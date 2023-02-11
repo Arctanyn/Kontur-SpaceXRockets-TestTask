@@ -87,7 +87,6 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
 
 @objc private extension RocketInfoViewController {
     func showLaunches() {
-
     }
     
     func openSettings() {
@@ -204,8 +203,8 @@ private extension RocketInfoViewController {
 //MARK: - RocketViewControllerProtocol
 
 extension RocketInfoViewController: RocketViewControllerProtocol {
-    func reloadData() {
-
+    func reloadData(in sections: IndexSet) {
+        rocketInfoCollectionView.reloadSections(sections)
     }
 }
 

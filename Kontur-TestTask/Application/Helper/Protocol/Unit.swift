@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Unit {
+protocol Unit: Codable {
     var designation: String { get }
 }

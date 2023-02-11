@@ -11,4 +11,6 @@ protocol SettingsPresenter: AnyObject {
     var numberOfSettings: Int { get }
     func settingOptionForCell(at indexPath: IndexPath) -> SettingsOptions?
     func close()
+    func selectedIndexForCell(with settingOption: SettingsOptions) -> Int
+    func saveSetting(forOption option: SettingsOptions, withUnitIndex index: Int)
 }

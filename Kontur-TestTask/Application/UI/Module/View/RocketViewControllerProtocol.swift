@@ -8,5 +8,5 @@
 import UIKit
 
 protocol RocketViewControllerProtocol: AnyObject where Self: UIViewController {
-    func reloadData()
+    func reloadData(in sections: IndexSet)
 }

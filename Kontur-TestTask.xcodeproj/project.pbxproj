@@ -104,6 +104,9 @@
 		94E704452997C77200A9C684 /* SettingsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704442997C77200A9C684 /* SettingsViewControllerProtocol.swift */; };
 		94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704462997C83300A9C684 /* SettingsCoordinatorImpl.swift */; };
 		94E704492997C9A900A9C684 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704482997C9A900A9C684 /* SettingsCoordinator.swift */; };
+		94E7044B2997D24B00A9C684 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044A2997D24B00A9C684 /* Settings.swift */; };
+		94E7044D2997D2A700A9C684 /* SettingsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044C2997D2A700A9C684 /* SettingsImpl.swift */; };
+		94E7044F2997F37500A9C684 /* Notification.Name + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +209,9 @@
 		94E704442997C77200A9C684 /* SettingsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		94E704462997C83300A9C684 /* SettingsCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorImpl.swift; sourceTree = "<group>"; };
 		94E704482997C9A900A9C684 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		94E7044A2997D24B00A9C684 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		94E7044C2997D2A700A9C684 /* SettingsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImpl.swift; sourceTree = "<group>"; };
+		94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +397,7 @@
 				943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */,
 				940EF8F629941836008D28AC /* DataDecoderImpl.swift */,
 				94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */,
+				94E7044C2997D2A700A9C684 /* SettingsImpl.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 				94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */,
 				9463C2352996B60400143193 /* Date + Ext.swift */,
 				9463C2372996B61C00143193 /* DateFormatter + Ext.swift */,
+				94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -436,6 +444,7 @@
 				943BF7C2298FF47700B7F3C6 /* RocketAPIService.swift */,
 				943BF80529902A0300B7F3C6 /* URLBuilder.swift */,
 				940EF8F4299417A6008D28AC /* DataDecoder.swift */,
+				94E7044A2997D24B00A9C684 /* Settings.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -782,6 +791,7 @@
 				94E6DC652992A1540088080C /* BaseView.swift in Sources */,
 				940EF8FC299425DA008D28AC /* RocketInfoCoordinator.swift in Sources */,
 				949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */,
+				94E7044D2997D2A700A9C684 /* SettingsImpl.swift in Sources */,
 				94113AE02991576A00D72AA4 /* BaseViewController.swift in Sources */,
 				949DFE072992617200BE27A7 /* RocketInfoSection.swift in Sources */,
 				943BF80229900B3900B7F3C6 /* Flickr.swift in Sources */,
@@ -813,6 +823,7 @@
 				949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */,
 				94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */,
 				949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */,
+				94E7044F2997F37500A9C684 /* Notification.Name + Ext.swift in Sources */,
 				94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */,
 				943BF7F22990046E00B7F3C6 /* HttpError.swift in Sources */,
 				943BF7D3298FF82300B7F3C6 /* LandingLegs.swift in Sources */,
@@ -837,6 +848,7 @@
 				9463C2402996C0DB00143193 /* RocketPagesCoordinator.swift in Sources */,
 				943BF7A5298FF24800B7F3C6 /* SceneDelegate.swift in Sources */,
 				94E7043C2997B56F00A9C684 /* BaseTableViewCell.swift in Sources */,
+				94E7044B2997D24B00A9C684 /* Settings.swift in Sources */,
 				94E6DC742992D2B20088080C /* RocketHeaderCellViewModel.swift in Sources */,
 				94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */,
 				94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */,
