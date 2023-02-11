@@ -1,5 +1,5 @@
 //
-//  RocketImageCollectionViewCell.swift
+//  RocketHeaderCollectionViewCell.swift
 //  Kontur-TestTask
 //
 //  Created by Малиль Дугулюбгов on 07.02.2023.
@@ -44,11 +44,15 @@ final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
-    override func layoutSubviews() {
-        shadowGradient.frame = rocketImageView.bounds
+    func addTargetToSettingsButton(target: Any?, action: Selector, forEvent event: UIControl.Event) {
+        rocketHeaderView.settingsButton.addTarget(target, action: action, for: event)
     }
     
     //MARK: - Overrided Methods
+    
+    override func layoutSubviews() {
+        shadowGradient.frame = rocketImageView.bounds
+    }
     
     override func setupSubviews() {
         addSubview(rocketImageView, useAutoLayout: true)

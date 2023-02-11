@@ -9,7 +9,7 @@ import UIKit
 
 final class RocketInfoViewController: BaseViewController, PresentableView {
 
-    typealias Presenter = RocketPresenter
+    typealias Presenter = RocketInfoPresenter
     
     //MARK: Properties
     
@@ -69,11 +69,8 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
     //MARK: - Overrided Methods
     
     override func setupSubviews() {
-        
         view.addSubview(rocketInfoCollectionView, useAutoLayout: true)
         rocketInfoCollectionView.dataSource = self
-        
-        
     }
     
     override func makeSubviewsLayout() {
@@ -92,6 +89,10 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
     func showLaunches() {
 
     }
+    
+    func openSettings() {
+        presenter.openSettings()
+    }
 }
 
 //MARK: - Private methods
@@ -105,7 +106,7 @@ private extension RocketInfoViewController {
             else { return nil }
             
             switch rocketInfoSection {
-            case .rocketImage:
+            case .rocketHeader:
                 return self.createRocketHeaderSection()
             case .specifications:
                 return self.createRocketSpecificationsSection()
@@ -228,18 +229,19 @@ extension RocketInfoViewController: UICollectionViewDataSource {
         }
         
         switch rocketInfoSection {
-        case .rocketImage:
-            let cell = collectionView.dequeueReusableCell(
+        case .rocketHeader:
+            guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketHeaderCollectionViewCell.identifier,
                 for: indexPath
-            ) as! RocketHeaderCollectionViewCell
+            ) as? RocketHeaderCollectionViewCell else { return UICollectionViewCell() }
             cell.configure(with: presenter.viewModelForRocketHeader())
+            cell.addTargetToSettingsButton(target: self, action: #selector(openSettings), forEvent: .touchUpInside)
             return cell
         case .specifications:
-            let cell = collectionView.dequeueReusableCell(
+            guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketSpecificationCollectionViewCell.identifier,
                 for: indexPath
-            ) as! RocketSpecificationCollectionViewCell
+            ) as? RocketSpecificationCollectionViewCell else { return UICollectionViewCell() }
             
             if let cellViewModel = presenter.viewModelForSpecificationCell(at: indexPath) {
                 cell.configure(with: cellViewModel)
@@ -247,10 +249,10 @@ extension RocketInfoViewController: UICollectionViewDataSource {
             
             return cell
         case .general:
-            let cell = collectionView.dequeueReusableCell(
+            guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketInfoCollectionViewCell.identifier,
                 for: indexPath
-            ) as! RocketInfoCollectionViewCell
+            ) as? RocketInfoCollectionViewCell else { return UICollectionViewCell() }
             
             if let cellViewModel = presenter.viewModelForGeneralInfoCell(at: indexPath) {
                 cell.configure(with: cellViewModel)
@@ -258,10 +260,10 @@ extension RocketInfoViewController: UICollectionViewDataSource {
             
             return cell
         case .firstStage, .secondStage:
-            let cell = collectionView.dequeueReusableCell(
+            guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: RocketStageCollectionViewCell.identifier,
                 for: indexPath
-            ) as! RocketStageCollectionViewCell
+            ) as? RocketStageCollectionViewCell else { return UICollectionViewCell() }
             
             if let cellViewModel = presenter.viewModelForStageInfoCell(at: indexPath) {
                 cell.configure(with: cellViewModel)
@@ -270,7 +272,10 @@ extension RocketInfoViewController: UICollectionViewDataSource {
             return cell
             
         case .button:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchesButtonCollectionViewCell.identifier, for: indexPath) as! LaunchesButtonCollectionViewCell
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: LaunchesButtonCollectionViewCell.identifier,
+                for: indexPath
+            ) as? LaunchesButtonCollectionViewCell else { return UICollectionViewCell() }
             cell.addTargetToButton(target: self, action: #selector(showLaunches), forEvent: .touchUpInside)
             return cell
         }

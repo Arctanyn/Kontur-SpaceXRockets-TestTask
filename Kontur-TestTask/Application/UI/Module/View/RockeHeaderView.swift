@@ -24,7 +24,7 @@ final class RockeHeaderView: BaseView {
         return label
     }()
     
-    private let settingsButton = SettingsButton()
+    private(set) var settingsButton = SettingsButton()
     
     //MARK: - Methods
     
@@ -45,7 +45,7 @@ final class RockeHeaderView: BaseView {
     }
     
     override func configureAppearance() {
-        backgroundColor = .systemBackground
+        backgroundColor = .black
     }
     
     override func setupSubviews() {

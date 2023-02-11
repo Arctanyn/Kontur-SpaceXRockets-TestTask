@@ -27,13 +27,23 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
         return view
     }
     
-    func createRocketInfoModule(rocket: Rocket) -> any PresentableView {
+    func createRocketInfoModule(rocket: Rocket, coordinator: RocketInfoCoordinator) -> any PresentableView {
         let view = RocketInfoViewController()
-        let presenter = RocketPresenterImpl(
+        let presenter = RocketInfoPresenterImpl(
             rocket: rocket,
-            view: view
+            view: view,
+            coordinator: coordinator
         )
         view.presenter = presenter
+        return view
+    }
+    
+    func createSettingsModule(coordinator: SettingsCoordinator) -> any PresentableView {
+        let view = SettingsViewController()
+        view.presenter = SettingsPresenterImpl(
+            view: view,
+            coordinator: coordinator
+        )
         return view
     }
 }

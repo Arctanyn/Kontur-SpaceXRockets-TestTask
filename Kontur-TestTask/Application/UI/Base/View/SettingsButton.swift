@@ -13,7 +13,7 @@ final class SettingsButton: UIButton {
     
     private let settingsImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "gearshape"))
-        imageView.tintColor = .label
+        imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

@@ -29,7 +29,18 @@ final class RocketInfoCoordinatorImpl: BaseCoordinator, RocketInfoCoordinator {
     
     override func start(with item: Any?) {
         guard let rocket = item as? Rocket else { return }
-        let module = assemblyBuilder.createRocketInfoModule(rocket: rocket)
+        let module = assemblyBuilder.createRocketInfoModule(rocket: rocket, coordinator: self)
         router.setRootModule(module, hideBar: true)
+    }
+    
+    //MARK: - Methods
+    
+    func runSettingsFlow() {
+        let coordinator = coordinatorsFactory.createSettingsCoordinator(router: router)
+        coordinator.finishFlow = { [weak self] in
+            self?.childDidFinish(coordinator)
+        }
+        addChild(coordinator)
+        coordinator.start(with: nil)
     }
 }

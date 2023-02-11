@@ -16,3 +16,4 @@ protocol BaseViewSetup: AnyObject {
 protocol ViewControllerUISetupProtocol: BaseViewSetup where Self: UIViewController { }
 protocol ViewUISetupProtocol: BaseViewSetup where Self: UIView { }
 protocol CollectionViewCellUISetupProtocol: BaseViewSetup where Self: UICollectionViewCell { }
+protocol TableViewCellUISetupProtocol: BaseViewSetup where Self: UITableViewCell { }

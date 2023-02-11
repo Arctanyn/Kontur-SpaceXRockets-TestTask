@@ -5,7 +5,7 @@
 //  Created by Малиль Дугулюбгов on 07.02.2023.
 //
 
-enum SettingsOptions {
+enum SettingsOptions: Int, CaseIterable {
     case height
     case diameter
     case mass
@@ -23,13 +23,13 @@ enum SettingsOptions {
             return "Payload"
         }
     }
-//    
-//    var units: [Unit] {
-//        switch self {
-//        case .height, .diameter:
-//            return [.meter, .feet]
-//        case .mass, .payload:
-//            return [.kilogram, .pound]
-//        }
-//    }
+    
+    var units: [Unit] {
+        switch self {
+        case .height, .diameter:
+            return [LenghtUnit.meter, LenghtUnit.feet]
+        case .mass, .payload:
+            return [WeightUnit.kilogram, WeightUnit.pound]
+        }
+    }
 }

@@ -56,6 +56,7 @@ private extension RocketPagesCoordinatorImpl {
         coordinator.finishFlow = { [weak self] in
             self?.childDidFinish(coordinator)
         }
+        addChild(coordinator)
         coordinator.start(with: rocket)
     }
 

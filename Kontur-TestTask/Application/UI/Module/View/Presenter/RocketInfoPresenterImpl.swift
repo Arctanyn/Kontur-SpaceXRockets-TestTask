@@ -1,5 +1,5 @@
 //
-//  RocketPresenterImpl.swift
+//  RocketInfoPresenterImpl.swift
 //  Kontur-TestTask
 //
 //  Created by Малиль Дугулюбгов on 06.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class RocketPresenterImpl {
+final class RocketInfoPresenterImpl {
     
     //MARK: Properties
     
@@ -29,19 +29,22 @@ final class RocketPresenterImpl {
     
     private let rocket: Rocket
     private unowned let view: RocketViewControllerProtocol
+    private let coordinator: RocketInfoCoordinator
     
     //MARK: - Initialization
     
     init(rocket: Rocket,
-         view: RocketViewControllerProtocol) {
+         view: RocketViewControllerProtocol,
+         coordinator: RocketInfoCoordinator) {
         self.rocket = rocket
         self.view = view
+        self.coordinator = coordinator
     }
 }
 
 //MARK: - Private
 
-private extension RocketPresenterImpl {
+private extension RocketInfoPresenterImpl {
     func makeSpecificationViewModel(for specification: RocketSpecification) -> RocketSpecificationCellViewModel {
         let name = specification.title
         var value = String()
@@ -49,21 +52,21 @@ private extension RocketPresenterImpl {
         
         switch specification {
         case .height:
-            unit = heightUnit.rawValue
+            unit = heightUnit.designation
             
             switch heightUnit {
             case .meter: value = String(rocket.height.meters ?? 0)
             case .feet: value = String(rocket.height.feet ?? 0)
             }
         case .diameter:
-            unit = diameterUnit.rawValue
+            unit = diameterUnit.designation
             
             switch diameterUnit {
             case .meter: value = String(rocket.diameter.meters ?? 0)
             case .feet: value = String(rocket.diameter.feet ?? 0)
             }
         case .mass:
-            unit = massUnit.rawValue
+            unit = massUnit.designation
             
             switch massUnit {
             case .kilogram: value = String(rocket.mass.kg)
@@ -72,7 +75,7 @@ private extension RocketPresenterImpl {
                 break
             }
         case .payload:
-            unit = payloadUnit.rawValue
+            unit = payloadUnit.designation
             
             switch payloadUnit {
             case .kilogram: value = String(rocket.payloadWeights.first?.kg ?? 0)
@@ -88,7 +91,7 @@ private extension RocketPresenterImpl {
 
 //MARK: - RocketPresenter
 
-extension RocketPresenterImpl: RocketPresenter {
+extension RocketInfoPresenterImpl: RocketInfoPresenter {
     var rocketName: String {
         rocket.name
     }
@@ -103,7 +106,7 @@ extension RocketPresenterImpl: RocketPresenter {
         }
         
         switch rocketInfoSection {
-        case .rocketImage:
+        case .rocketHeader:
             return 1
         case .specifications:
             return RocketSpecification.count
@@ -125,6 +128,10 @@ extension RocketPresenterImpl: RocketPresenter {
             rocketName: self.rocketName,
             imageURL: URL(string: rocket.flickrImages.first ?? "")
         )
+    }
+    
+    func openSettings() {
+        coordinator.runSettingsFlow()
     }
     
     func viewModelForSpecificationCell(at indexPath: IndexPath) -> RocketSpecificationCellViewModel? {
@@ -173,10 +180,10 @@ extension RocketPresenterImpl: RocketPresenter {
             specification = String(rocket.engines.number)
         case .fuelAmount:
             specification = String(rocketInfoSection == .firstStage ? rocket.firstStage.fuelAmountTons : rocket.secondStage.fuelAmountTons)
-            unit = WeightUnit.tonne.rawValue
+            unit = WeightUnit.tonne.designation
         case .burnTime:
             specification = String((rocketInfoSection == .firstStage ? rocket.firstStage.burnTimeSEC : rocket.secondStage.burnTimeSEC) ?? 0)
-            unit = TimeUnit.seconds.rawValue
+            unit = TimeUnit.seconds.designation
         }
         
         return RocketStageCellViewModel(title: title, specification: specification, unit: unit)

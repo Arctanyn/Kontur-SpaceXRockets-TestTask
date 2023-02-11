@@ -23,7 +23,7 @@ class BaseViewController: UIViewController {
 
 @objc extension BaseViewController: ViewControllerUISetupProtocol {
     func configureAppearance() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .black
     }
     
     func setupSubviews() { }

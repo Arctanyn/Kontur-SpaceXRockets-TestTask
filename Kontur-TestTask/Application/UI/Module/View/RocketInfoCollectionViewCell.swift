@@ -35,7 +35,7 @@ class RocketInfoCollectionViewCell: BaseCollectionViewCell {
     //MARK: - Overrided Methods
     
     override func configureAppearance() {
-        backgroundColor = .systemBackground
+        backgroundColor = .black
     }
     
     override func setupSubviews() {

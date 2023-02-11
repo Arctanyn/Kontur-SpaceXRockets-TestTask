@@ -27,7 +27,7 @@ class BaseView: UIView {
 
 @objc extension BaseView: ViewUISetupProtocol {
     func configureAppearance() {
-        backgroundColor = .systemBackground
+        backgroundColor = .black
     }
     
     func setupSubviews() { }

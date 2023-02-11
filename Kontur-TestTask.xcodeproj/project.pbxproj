@@ -15,8 +15,8 @@
 		94113AD8299154A200D72AA4 /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AD7299154A200D72AA4 /* UIView + Ext.swift */; };
 		94113ADC2991555500D72AA4 /* BaseViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113ADB2991555500D72AA4 /* BaseViewSetup.swift */; };
 		94113AE02991576A00D72AA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113ADF2991576A00D72AA4 /* BaseViewController.swift */; };
-		94113AE2299159F100D72AA4 /* RocketPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */; };
-		94113AE529915A4700D72AA4 /* RocketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE429915A4700D72AA4 /* RocketPresenter.swift */; };
+		94113AE2299159F100D72AA4 /* RocketInfoPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE1299159F100D72AA4 /* RocketInfoPresenterImpl.swift */; };
+		94113AE529915A4700D72AA4 /* RocketInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE429915A4700D72AA4 /* RocketInfoPresenter.swift */; };
 		94113AE929915B5200D72AA4 /* RocketViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */; };
 		94113AEB2991699100D72AA4 /* PresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AEA2991699100D72AA4 /* PresentableView.swift */; };
 		94113AEE29916AE500D72AA4 /* AssemblyuBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94113AED29916AE500D72AA4 /* AssemblyuBuilderImpl.swift */; };
@@ -95,6 +95,15 @@
 		94E7042C2997961E00A9C684 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7042B2997961E00A9C684 /* AsyncImageView.swift */; };
 		94E7042E29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */; };
 		94E7043129979ED200A9C684 /* CompositionalLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */; };
+		94E704362997B3A100A9C684 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704352997B3A100A9C684 /* SettingsViewController.swift */; };
+		94E7043A2997B54A00A9C684 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704392997B54A00A9C684 /* SettingTableViewCell.swift */; };
+		94E7043C2997B56F00A9C684 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7043B2997B56F00A9C684 /* BaseTableViewCell.swift */; };
+		94E7043E2997B7AF00A9C684 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7043D2997B7AF00A9C684 /* Unit.swift */; };
+		94E704412997C0CF00A9C684 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704402997C0CF00A9C684 /* SettingsPresenter.swift */; };
+		94E704432997C74C00A9C684 /* SettingsPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704422997C74C00A9C684 /* SettingsPresenterImpl.swift */; };
+		94E704452997C77200A9C684 /* SettingsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704442997C77200A9C684 /* SettingsViewControllerProtocol.swift */; };
+		94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704462997C83300A9C684 /* SettingsCoordinatorImpl.swift */; };
+		94E704492997C9A900A9C684 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704482997C9A900A9C684 /* SettingsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,8 +115,8 @@
 		94113AD7299154A200D72AA4 /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		94113ADB2991555500D72AA4 /* BaseViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewSetup.swift; sourceTree = "<group>"; };
 		94113ADF2991576A00D72AA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPresenterImpl.swift; sourceTree = "<group>"; };
-		94113AE429915A4700D72AA4 /* RocketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPresenter.swift; sourceTree = "<group>"; };
+		94113AE1299159F100D72AA4 /* RocketInfoPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoPresenterImpl.swift; sourceTree = "<group>"; };
+		94113AE429915A4700D72AA4 /* RocketInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoPresenter.swift; sourceTree = "<group>"; };
 		94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewControllerProtocol.swift; sourceTree = "<group>"; };
 		94113AEA2991699100D72AA4 /* PresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableView.swift; sourceTree = "<group>"; };
 		94113AED29916AE500D72AA4 /* AssemblyuBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyuBuilderImpl.swift; sourceTree = "<group>"; };
@@ -188,6 +197,15 @@
 		94E7042B2997961E00A9C684 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutHelper.swift; sourceTree = "<group>"; };
+		94E704352997B3A100A9C684 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		94E704392997B54A00A9C684 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		94E7043B2997B56F00A9C684 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		94E7043D2997B7AF00A9C684 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		94E704402997C0CF00A9C684 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		94E704422997C74C00A9C684 /* SettingsPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterImpl.swift; sourceTree = "<group>"; };
+		94E704442997C77200A9C684 /* SettingsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		94E704462997C83300A9C684 /* SettingsCoordinatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorImpl.swift; sourceTree = "<group>"; };
+		94E704482997C9A900A9C684 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +224,7 @@
 			children = (
 				9463C23F2996C0DB00143193 /* RocketPagesCoordinator.swift */,
 				940EF8FB299425DA008D28AC /* RocketInfoCoordinator.swift */,
+				94E704482997C9A900A9C684 /* SettingsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -242,8 +261,8 @@
 		94113AE329915A0000D72AA4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				94113AE1299159F100D72AA4 /* RocketPresenterImpl.swift */,
-				94113AE429915A4700D72AA4 /* RocketPresenter.swift */,
+				94113AE1299159F100D72AA4 /* RocketInfoPresenterImpl.swift */,
+				94113AE429915A4700D72AA4 /* RocketInfoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -350,6 +369,7 @@
 			children = (
 				94E6DC7E2992DA240088080C /* RocketPages */,
 				94113AE729915AF300D72AA4 /* RocketInfo */,
+				94E704342997B38D00A9C684 /* Settings */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -357,8 +377,8 @@
 		943BF7BB298FF3F200B7F3C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				949269432993C50D0066E5E1 /* Coordinator */,
 				94113ADD2991574E00D72AA4 /* Base */,
+				949269432993C50D0066E5E1 /* Coordinator */,
 				943BF7BA298FF3E800B7F3C6 /* Module */,
 			);
 			path = UI;
@@ -383,6 +403,7 @@
 				943BF7C0298FF44E00B7F3C6 /* Service */,
 				94113ADB2991555500D72AA4 /* BaseViewSetup.swift */,
 				94113AEA2991699100D72AA4 /* PresentableView.swift */,
+				94E7043D2997B7AF00A9C684 /* Unit.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -510,6 +531,7 @@
 				949269442993C5320066E5E1 /* ApplicationCoordinator.swift */,
 				9463C23D2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift */,
 				940EF8FD29942617008D28AC /* RocketInfoCoordinatorImpl.swift */,
+				94E704462997C83300A9C684 /* SettingsCoordinatorImpl.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -551,6 +573,7 @@
 				94E6DC642992A1540088080C /* BaseView.swift */,
 				94E6DC702992CCE00088080C /* SettingsButton.swift */,
 				94E7042B2997961E00A9C684 /* AsyncImageView.swift */,
+				94E7043B2997B56F00A9C684 /* BaseTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +639,42 @@
 				94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */,
 			);
 			name = LaunchesButtonCell;
+			sourceTree = "<group>";
+		};
+		94E704342997B38D00A9C684 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				94E704372997B53800A9C684 /* View */,
+				94E7043F2997C0AC00A9C684 /* Presenter */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		94E704372997B53800A9C684 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94E704382997B53D00A9C684 /* TableViewCell */,
+				94E704352997B3A100A9C684 /* SettingsViewController.swift */,
+				94E704442997C77200A9C684 /* SettingsViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94E704382997B53D00A9C684 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				94E704392997B54A00A9C684 /* SettingTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		94E7043F2997C0AC00A9C684 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				94E704422997C74C00A9C684 /* SettingsPresenterImpl.swift */,
+				94E704402997C0CF00A9C684 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,14 +762,17 @@
 				9463C2492996D79000143193 /* TimeUnit.swift in Sources */,
 				943BF7FD29900B3900B7F3C6 /* Core.swift in Sources */,
 				943BF7DD298FF8A000B7F3C6 /* CompositeFairing.swift in Sources */,
-				94113AE2299159F100D72AA4 /* RocketPresenterImpl.swift in Sources */,
+				94113AE2299159F100D72AA4 /* RocketInfoPresenterImpl.swift in Sources */,
 				94113AEE29916AE500D72AA4 /* AssemblyuBuilderImpl.swift in Sources */,
 				9463C2472996D78700143193 /* WeightUnit.swift in Sources */,
 				9492694D2993CADF0066E5E1 /* RocketPagesPresenter.swift in Sources */,
 				949269422993C4BF0066E5E1 /* CoordinatorsFactory.swift in Sources */,
+				94E704412997C0CF00A9C684 /* SettingsPresenter.swift in Sources */,
 				943BF7FE29900B3900B7F3C6 /* Patch.swift in Sources */,
 				94113AEB2991699100D72AA4 /* PresentableView.swift in Sources */,
+				94E7043A2997B54A00A9C684 /* SettingTableViewCell.swift in Sources */,
 				949DFE0A2992791200BE27A7 /* RocketStageCollectionViewCell.swift in Sources */,
+				94E704362997B3A100A9C684 /* SettingsViewController.swift in Sources */,
 				94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */,
 				9463C2382996B61C00143193 /* DateFormatter + Ext.swift in Sources */,
 				949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */,
@@ -735,6 +797,7 @@
 				9492694B2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift in Sources */,
 				949269402993C4310066E5E1 /* BaseCoordinator.swift in Sources */,
 				943BF7DB298FF88300B7F3C6 /* Engines.swift in Sources */,
+				94E704492997C9A900A9C684 /* SettingsCoordinator.swift in Sources */,
 				9492693E2993C4020066E5E1 /* RouterImpl.swift in Sources */,
 				943BF80829902CC500B7F3C6 /* URLBuilderImpl.swift in Sources */,
 				949269332993BF0F0066E5E1 /* Coordinator.swift in Sources */,
@@ -743,12 +806,14 @@
 				949269372993C34B0066E5E1 /* Router.swift in Sources */,
 				94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */,
 				943BF7D5298FF83200B7F3C6 /* Mass.swift in Sources */,
+				94E704452997C77200A9C684 /* SettingsViewControllerProtocol.swift in Sources */,
 				940EF8FE29942617008D28AC /* RocketInfoCoordinatorImpl.swift in Sources */,
 				943BF7F02990037800B7F3C6 /* RocketAPIServiceImpl.swift in Sources */,
 				9463C23E2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift in Sources */,
 				949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */,
 				94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */,
 				949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */,
+				94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */,
 				943BF7F22990046E00B7F3C6 /* HttpError.swift in Sources */,
 				943BF7D3298FF82300B7F3C6 /* LandingLegs.swift in Sources */,
 				949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */,
@@ -758,9 +823,11 @@
 				949269312993BED30066E5E1 /* AppFactory.swift in Sources */,
 				94E6DC6F2992CC110088080C /* CaseIterable + Ext.swift in Sources */,
 				94E7043129979ED200A9C684 /* CompositionalLayoutHelper.swift in Sources */,
-				94113AE529915A4700D72AA4 /* RocketPresenter.swift in Sources */,
+				94113AE529915A4700D72AA4 /* RocketInfoPresenter.swift in Sources */,
 				9492694F2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift in Sources */,
 				943BF7A3298FF24800B7F3C6 /* AppDelegate.swift in Sources */,
+				94E7043E2997B7AF00A9C684 /* Unit.swift in Sources */,
+				94E704432997C74C00A9C684 /* SettingsPresenterImpl.swift in Sources */,
 				943BF7C6298FF4E500B7F3C6 /* Rocket.swift in Sources */,
 				94E6DC672992AE460088080C /* RocketHeaderCollectionViewCell.swift in Sources */,
 				943BF7C9298FF77700B7F3C6 /* ISP.swift in Sources */,
@@ -769,6 +836,7 @@
 				943BF7CF298FF7F000B7F3C6 /* FirstStage.swift in Sources */,
 				9463C2402996C0DB00143193 /* RocketPagesCoordinator.swift in Sources */,
 				943BF7A5298FF24800B7F3C6 /* SceneDelegate.swift in Sources */,
+				94E7043C2997B56F00A9C684 /* BaseTableViewCell.swift in Sources */,
 				94E6DC742992D2B20088080C /* RocketHeaderCellViewModel.swift in Sources */,
 				94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */,
 				94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */,

@@ -34,4 +34,8 @@ extension CoordinatorsFactoryImpl: CoordinatorsFactory {
     func createRocketInfoCoordinator(router: Router) -> RocketInfoCoordinator {
         RocketInfoCoordinatorImpl(assemblyBuilder: assemblyBuilder, coordinatorsFactory: self, router: router)
     }
+    
+    func createSettingsCoordinator(router: Router) -> SettingsCoordinator {
+        return SettingsCoordinatorImpl(assemblyBuilder: assemblyBuilder, router: router)
+    }
 }

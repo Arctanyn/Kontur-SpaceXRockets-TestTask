@@ -8,7 +8,7 @@
 //MARK: RocketInfoSection
 
 enum RocketInfoSection: Int, CaseIterable {
-    case rocketImage
+    case rocketHeader
     case specifications
     case general
     case firstStage
@@ -17,13 +17,11 @@ enum RocketInfoSection: Int, CaseIterable {
     
     var title: String? {
         switch self {
-        case .rocketImage, .specifications, .general:
-            return nil
         case .firstStage:
             return "First stage"
         case .secondStage:
             return "Secong stage"
-        case .button:
+        default:
             return nil
         }
     }
