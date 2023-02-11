@@ -7,20 +7,9 @@
 
 import UIKit
 
-extension CAGradientLayer {
-    static func smoothBackgroundShadow() -> CAGradientLayer {
-        let gradient = CAGradientLayer()
-        gradient.colors = [
-            UIColor.black.withAlphaComponent(0.8).cgColor,
-            UIColor.clear.cgColor,
-            UIColor.clear.cgColor,
-        ]
-        return gradient
-    }
-
-}
-
 final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
+    
+    //MARK: Core Graphics
     
     private let shadowGradient: CAGradientLayer = {
         let gradient = CAGradientLayer()
@@ -36,8 +25,8 @@ final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
     
     private let rocketHeaderView = RockeHeaderView()
     
-    private lazy var rocketImageView: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var rocketImageView: AsyncImageView = {
+        let imageView = AsyncImageView(url: nil)
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         imageView.backgroundColor = .tertiarySystemFill
@@ -51,7 +40,7 @@ final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
         rocketHeaderView.rocketName = viewModel.rocketName
         
         Task {
-            rocketImageView.image = await viewModel.fetchImage()
+            await rocketImageView.fetchImage(from: viewModel.imageURL)
         }
     }
     

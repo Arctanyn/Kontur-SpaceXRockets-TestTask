@@ -42,5 +42,4 @@ private extension ApplicationCoordinator {
         }
         coordinator.start(with: nil)
     }
-
 }

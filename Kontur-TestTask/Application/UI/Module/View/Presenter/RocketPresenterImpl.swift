@@ -119,7 +119,10 @@ extension RocketPresenterImpl: RocketPresenter {
     }
     
     func viewModelForRocketHeader() -> RocketHeaderCellViewModel {
-        return RocketHeaderCellViewModel(rocketName: self.rocketName, imageURL: rocket.flickrImages.first ?? "")
+        return RocketHeaderCellViewModel(
+            rocketName: self.rocketName,
+            imageURL: URL(string: rocket.flickrImages.first ?? "")
+        )
     }
     
     func viewModelForSpecificationCell(at indexPath: IndexPath) -> RocketSpecificationCellViewModel? {

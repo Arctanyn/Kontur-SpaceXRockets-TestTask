@@ -92,6 +92,7 @@
 		94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */; };
 		94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */; };
 		94E6DC802992DA450088080C /* RocketPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */; };
+		94E7042C2997961E00A9C684 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7042B2997961E00A9C684 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +183,7 @@
 		94E6DC7A2992D3880088080C /* RocketInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesViewController.swift; sourceTree = "<group>"; };
+		94E7042B2997961E00A9C684 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +544,7 @@
 				949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */,
 				94E6DC642992A1540088080C /* BaseView.swift */,
 				94E6DC702992CCE00088080C /* SettingsButton.swift */,
+				94E7042B2997961E00A9C684 /* AsyncImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */,
 				943BF80129900B3900B7F3C6 /* Links.swift in Sources */,
 				943BF7D9298FF86700B7F3C6 /* Payloads.swift in Sources */,
+				94E7042C2997961E00A9C684 /* AsyncImageView.swift in Sources */,
 				94E6DC652992A1540088080C /* BaseView.swift in Sources */,
 				940EF8FC299425DA008D28AC /* RocketInfoCoordinator.swift in Sources */,
 				949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */,
