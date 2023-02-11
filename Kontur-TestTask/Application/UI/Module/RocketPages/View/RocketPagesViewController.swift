@@ -87,6 +87,18 @@ extension RocketPagesViewController: RocketPagesViewControllerProtocol {
     func stopLoadingIndicator() {
         loadingIndicator.stopAnimating()
     }
+    
+    func showErrorAlert(description: String) {
+        let alert = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "Try again", style: .default, handler: { [weak self] _ in
+                Task {
+                    await self?.presenter.fetchRocketsInfo()
+                }
+            })
+        )
+        present(alert, animated: true)
+    }
 }
 
 //MARK: - UIPageViewControllerDataSource

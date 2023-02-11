@@ -176,7 +176,7 @@ extension RocketInfoPresenterImpl: RocketInfoPresenter {
         case .country:
             info = rocket.country
         case .launchCost:
-            info = "$\(rocket.costPerLaunch)"
+            info = rocket.costPerLaunch.toCurrency()
         }
         
         return RocketInfoCellViewModel(title: generalInfo.title, info: info)

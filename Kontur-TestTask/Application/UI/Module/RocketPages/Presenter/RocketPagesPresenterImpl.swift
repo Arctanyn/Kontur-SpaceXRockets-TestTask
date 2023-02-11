@@ -39,19 +39,14 @@ final class RocketPagesPresenterImpl {
 //MARK: - Private methods
 
 private extension RocketPagesPresenterImpl {
+    @MainActor
     func fetchRocketsData() async {
         do {
             async let rocketData = try rocketAPIService.getRockets()
-            let rockets = try await dataDecoder.decode(data: rocketData, to: [Rocket].self)
-            self.rockets = rockets
-
-            await MainActor.run {
-                view.stopLoadingIndicator()
-            }
-        } catch let error where error is HttpError {
-            print(error.localizedDescription)
+            rockets = try await dataDecoder.decode(data: rocketData, to: [Rocket].self)
+            view.stopLoadingIndicator()
         } catch {
-            fatalError(error.localizedDescription)
+            view.showErrorAlert(description: error.localizedDescription)
         }
     }
 }

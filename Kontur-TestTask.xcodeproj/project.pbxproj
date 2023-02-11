@@ -107,6 +107,7 @@
 		94E7044B2997D24B00A9C684 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044A2997D24B00A9C684 /* Settings.swift */; };
 		94E7044D2997D2A700A9C684 /* SettingsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044C2997D2A700A9C684 /* SettingsImpl.swift */; };
 		94E7044F2997F37500A9C684 /* Notification.Name + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */; };
+		94E704512997F7F900A9C684 /* Int + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E704502997F7F900A9C684 /* Int + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +213,7 @@
 		94E7044A2997D24B00A9C684 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		94E7044C2997D2A700A9C684 /* SettingsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImpl.swift; sourceTree = "<group>"; };
 		94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name + Ext.swift"; sourceTree = "<group>"; };
+		94E704502997F7F900A9C684 /* Int + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +244,7 @@
 				94113AD4299153FB00D72AA4 /* UITableViewCell + Ext.swift */,
 				949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */,
 				94E6DC682992C1210088080C /* UIViewController + Ext.swift */,
-				9463C2392996B6E000143193 /* String + Ext.swift */,
+				94E704502997F7F900A9C684 /* Int + Ext.swift */,
 			);
 			path = "UIKit + Ext";
 			sourceTree = "<group>";
@@ -422,6 +424,7 @@
 				94E6DC6E2992CC110088080C /* CaseIterable + Ext.swift */,
 				9463C2352996B60400143193 /* Date + Ext.swift */,
 				9463C2372996B61C00143193 /* DateFormatter + Ext.swift */,
+				9463C2392996B6E000143193 /* String + Ext.swift */,
 				94E7044E2997F37500A9C684 /* Notification.Name + Ext.swift */,
 			);
 			path = Extension;
@@ -822,6 +825,7 @@
 				9463C23E2996BEFA00143193 /* RocketPagesCoordinatorImpl.swift in Sources */,
 				949DFE052992599600BE27A7 /* UICollectionViewCell + Ext.swift in Sources */,
 				94E6DC7B2992D3880088080C /* RocketInfoCellViewModel.swift in Sources */,
+				94E704512997F7F900A9C684 /* Int + Ext.swift in Sources */,
 				949269352993BF5C0066E5E1 /* AssemblyBuilder.swift in Sources */,
 				94E7044F2997F37500A9C684 /* Notification.Name + Ext.swift in Sources */,
 				94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */,

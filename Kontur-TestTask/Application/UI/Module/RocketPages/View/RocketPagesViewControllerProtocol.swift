@@ -10,4 +10,5 @@ import UIKit
 protocol RocketPagesViewControllerProtocol: AnyObject where Self: UIViewController {
     func startLoadingInficator()
     func stopLoadingIndicator()
+    func showErrorAlert(description: String)
 }

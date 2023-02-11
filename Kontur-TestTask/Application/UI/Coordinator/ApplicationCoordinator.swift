@@ -31,7 +31,6 @@ final class ApplicationCoordinator: BaseCoordinator {
     //MARK: - Overrided Methods
     
     override func start(with item: Any?) {
-//        setDefaultSettings()
         runRocketPagesFlow()
     }
 }
