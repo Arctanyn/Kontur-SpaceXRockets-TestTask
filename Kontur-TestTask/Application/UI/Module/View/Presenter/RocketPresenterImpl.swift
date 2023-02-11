@@ -111,6 +111,8 @@ extension RocketPresenterImpl: RocketPresenter {
             return GeneralInfo.count
         case .firstStage, .secondStage:
             return StageInfo.count
+        case .button:
+            return 1
         }
     }
     

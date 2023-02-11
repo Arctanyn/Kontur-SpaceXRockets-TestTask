@@ -93,6 +93,8 @@
 		94E6DC7D2992D3B00088080C /* RocketStageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */; };
 		94E6DC802992DA450088080C /* RocketPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */; };
 		94E7042C2997961E00A9C684 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7042B2997961E00A9C684 /* AsyncImageView.swift */; };
+		94E7042E29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */; };
+		94E7043129979ED200A9C684 /* CompositionalLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +186,8 @@
 		94E6DC7C2992D3B00088080C /* RocketStageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCellViewModel.swift; sourceTree = "<group>"; };
 		94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketPagesViewController.swift; sourceTree = "<group>"; };
 		94E7042B2997961E00A9C684 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +370,7 @@
 				943BF7EF2990037800B7F3C6 /* RocketAPIServiceImpl.swift */,
 				943BF80729902CC500B7F3C6 /* URLBuilderImpl.swift */,
 				940EF8F629941836008D28AC /* DataDecoderImpl.swift */,
+				94E7043029979ED200A9C684 /* CompositionalLayoutHelper.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 				94E6DC752992D2CD0088080C /* RocketSpecificationCell */,
 				94E6DC762992D2ED0088080C /* RocketInfoCell */,
 				94E6DC772992D3030088080C /* RocketStageCell */,
+				94E7042F29979B1000A9C684 /* LaunchesButtonCell */,
 			);
 			name = CollectionViewCell;
 			sourceTree = "<group>";
@@ -602,6 +608,14 @@
 				949269492993CAA40066E5E1 /* Presenter */,
 			);
 			path = RocketPages;
+			sourceTree = "<group>";
+		};
+		94E7042F29979B1000A9C684 /* LaunchesButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				94E7042D29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift */,
+			);
+			name = LaunchesButtonCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -717,6 +731,7 @@
 				9463C2452996D77300143193 /* LenghtUnit.swift in Sources */,
 				943BF7CB298FF7A600B7F3C6 /* Diameter.swift in Sources */,
 				949269472993C5F90066E5E1 /* CoordinatorsFactoryImpl.swift in Sources */,
+				94E7042E29979B0D00A9C684 /* LaunchesButtonCollectionViewCell.swift in Sources */,
 				9492694B2993CABB0066E5E1 /* RocketPagesPresenterImpl.swift in Sources */,
 				949269402993C4310066E5E1 /* BaseCoordinator.swift in Sources */,
 				943BF7DB298FF88300B7F3C6 /* Engines.swift in Sources */,
@@ -742,6 +757,7 @@
 				94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */,
 				949269312993BED30066E5E1 /* AppFactory.swift in Sources */,
 				94E6DC6F2992CC110088080C /* CaseIterable + Ext.swift in Sources */,
+				94E7043129979ED200A9C684 /* CompositionalLayoutHelper.swift in Sources */,
 				94113AE529915A4700D72AA4 /* RocketPresenter.swift in Sources */,
 				9492694F2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift in Sources */,
 				943BF7A3298FF24800B7F3C6 /* AppDelegate.swift in Sources */,

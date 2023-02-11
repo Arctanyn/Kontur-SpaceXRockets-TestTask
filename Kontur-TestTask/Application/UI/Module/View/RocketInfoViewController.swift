@@ -58,6 +58,10 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
             RocketStageCollectionViewCell.self,
             forCellWithReuseIdentifier: RocketStageCollectionViewCell.identifier
         )
+        collectionView.register(
+            LaunchesButtonCollectionViewCell.self,
+            forCellWithReuseIdentifier: LaunchesButtonCollectionViewCell.identifier
+        )
         
         return collectionView
     }()
@@ -82,11 +86,18 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
     }
 }
 
+//MARK: - Actions
+
+@objc private extension RocketInfoViewController {
+    func showLaunches() {
+
+    }
+}
+
 //MARK: - Private methods
 
 private extension RocketInfoViewController {
     func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
-
         UICollectionViewCompositionalLayout { [weak self] section, layoutEnvironment in
             guard
                 let self,
@@ -95,74 +106,97 @@ private extension RocketInfoViewController {
             
             switch rocketInfoSection {
             case .rocketImage:
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                
-                let group = NSCollectionLayoutGroup.horizontal(
-                    layoutSize:
-                    .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(0.5)
-                    ),
-                    subitems: [item]
-                )
-                
-                let section = NSCollectionLayoutSection(group: group)
-                return section
+                return self.createRocketHeaderSection()
             case .specifications:
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                
-                let group = NSCollectionLayoutGroup.horizontal(
-                    layoutSize:
-                    .init(
-                        widthDimension: .fractionalWidth(0.27),
-                        heightDimension: .fractionalWidth(0.27)
-                    ),
-                    subitems: [item]
-                )
-                
-                let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                section.interGroupSpacing = 10
-                section.contentInsets = .init(top: 30, leading: 30, bottom: 20, trailing: 30)
-                
-                return section
+                return self.createRocketSpecificationsSection()
             case .general, .firstStage, .secondStage:
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(40)
-                    ),
-                    subitems: [item]
-                )
-                                
-                let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 10
-                section.contentInsets = .init(top: 20, leading: 30, bottom: 30, trailing: 30)
-                
-                if rocketInfoSection == .firstStage || rocketInfoSection == .secondStage {
-                    section.boundarySupplementaryItems = [self.supplementaryStageHeaderItem]
-                }
-            
-                return section
+                return self.createRocketInfoSection(for: rocketInfoSection)
+            case .button:
+                return self.createLaunchesButtonSection()
             }
         }
+    }
+    
+    func createRocketHeaderSection() -> NSCollectionLayoutSection {
+        let item = CompositionalLayoutHelper.createItem(
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .fractionalHeight(1)
+        )
+        
+        let group = CompositionalLayoutHelper.createGroup(
+            alignment: .horizontal,
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .fractionalHeight(0.45),
+            subitems: [item]
+        )
+        
+        return CompositionalLayoutHelper.createSection(group: group)
+    }
+    
+    func createRocketSpecificationsSection() -> NSCollectionLayoutSection {
+        let item = CompositionalLayoutHelper.createItem(
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .fractionalHeight(1)
+        )
+        
+        let group = CompositionalLayoutHelper.createGroup(
+            alignment: .horizontal,
+            widthDimension: .fractionalWidth(0.27),
+            heightDimention: .fractionalWidth(0.27),
+            subitems: [item]
+        )
+        
+        return CompositionalLayoutHelper.createSection(
+            group: group,
+            scrollingBehavior: .continuous,
+            interGroupSpacing: 10,
+            contentInsets: .init(top: 30, leading: 30, bottom: 20, trailing: 30)
+        )
+    }
+    
+    func createRocketInfoSection(for rocketSection: RocketInfoSection) -> NSCollectionLayoutSection {
+        let item = CompositionalLayoutHelper.createItem(
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .fractionalHeight(1)
+        )
+        
+        let group = CompositionalLayoutHelper.createGroup(
+            alignment: .vertical,
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .estimated(40),
+            subitems: [item]
+        )
+        
+        let section = CompositionalLayoutHelper.createSection(
+            group: group,
+            interGroupSpacing: 10,
+            contentInsets: .init(top: 20, leading: 30, bottom: 30, trailing: 30)
+        )
+
+        if rocketSection == .firstStage || rocketSection == .secondStage {
+            section.boundarySupplementaryItems = [self.supplementaryStageHeaderItem]
+        }
+        
+        return section
+    }
+    
+    func createLaunchesButtonSection() -> NSCollectionLayoutSection {
+        let item = CompositionalLayoutHelper.createItem(
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .fractionalHeight(1)
+        )
+        
+        let group = CompositionalLayoutHelper.createGroup(
+            alignment: .vertical,
+            widthDimension: .fractionalWidth(1),
+            heightDimention: .estimated(70),
+            subitems: [item]
+        )
+        
+        return CompositionalLayoutHelper.createSection(
+            group: group,
+            contentInsets: .init(top: 0, leading: 30, bottom: 0, trailing: 30)
+        )
     }
 }
 
@@ -234,6 +268,11 @@ extension RocketInfoViewController: UICollectionViewDataSource {
             }
             
             return cell
+            
+        case .button:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchesButtonCollectionViewCell.identifier, for: indexPath) as! LaunchesButtonCollectionViewCell
+            cell.addTargetToButton(target: self, action: #selector(showLaunches), forEvent: .touchUpInside)
+            return cell
         }
     }
     
@@ -255,5 +294,4 @@ extension RocketInfoViewController: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
     }
-    
 }
