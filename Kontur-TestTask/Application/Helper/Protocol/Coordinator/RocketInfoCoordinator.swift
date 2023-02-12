@@ -8,4 +8,5 @@
 protocol RocketInfoCoordinator where Self: Coordinator {
     var finishFlow: VoidClosure? { get set }
     func runSettingsFlow()
+    func showLaunches(rocket: Rocket)
 }

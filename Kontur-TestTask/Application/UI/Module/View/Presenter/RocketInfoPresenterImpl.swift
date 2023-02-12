@@ -154,6 +154,10 @@ extension RocketInfoPresenterImpl: RocketInfoPresenter {
         coordinator.runSettingsFlow()
     }
     
+    func openLaunches() {
+        coordinator.showLaunches(rocket: rocket)
+    }
+    
     func viewModelForSpecificationCell(at indexPath: IndexPath) -> RocketSpecificationCellViewModel? {
         guard let specification = RocketSpecification(rawValue: indexPath.item) else {
             return nil

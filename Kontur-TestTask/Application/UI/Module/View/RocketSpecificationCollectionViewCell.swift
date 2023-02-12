@@ -12,13 +12,11 @@ final class RocketSpecificationCollectionViewCell: BaseCollectionViewCell {
     //MARK: Views
     
     private lazy var vStack: UIStackView = {
-        let stackView = UIStackView()
+        let stackView = UIStackView(arrangedSubviews: [valueLabel, specificationNameLabel])
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.spacing = 5
         stackView.distribution = .fillProportionally
-        stackView.addArrangedSubview(valueLabel)
-        stackView.addArrangedSubview(specificationNameLabel)
         return stackView
     }()
     

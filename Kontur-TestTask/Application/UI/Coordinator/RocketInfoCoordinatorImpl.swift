@@ -12,6 +12,7 @@ final class RocketInfoCoordinatorImpl: BaseCoordinator, RocketInfoCoordinator {
     //MARK: Properties
     
     var finishFlow: VoidClosure?
+    private var launchDisplayRequestHandler: ((Rocket) -> Void)?
 
     private let assemblyBuilder: AssemblyBuilder
     private let coordinatorsFactory: CoordinatorsFactory
@@ -19,10 +20,14 @@ final class RocketInfoCoordinatorImpl: BaseCoordinator, RocketInfoCoordinator {
     
     //MARK: - Initialization
     
-    init(assemblyBuilder: AssemblyBuilder, coordinatorsFactory: CoordinatorsFactory, router: Router) {
+    init(assemblyBuilder: AssemblyBuilder,
+         coordinatorsFactory: CoordinatorsFactory,
+         router: Router,
+         launchDisplayRequestHandler: ((Rocket) -> Void)?) {
         self.assemblyBuilder = assemblyBuilder
         self.coordinatorsFactory = coordinatorsFactory
         self.router = router
+        self.launchDisplayRequestHandler = launchDisplayRequestHandler
     }
     
     //MARK: - Overrided Methods
@@ -42,5 +47,9 @@ final class RocketInfoCoordinatorImpl: BaseCoordinator, RocketInfoCoordinator {
         }
         addChild(coordinator)
         coordinator.start(with: nil)
+    }
+        
+    func showLaunches(rocket: Rocket) {
+        launchDisplayRequestHandler?(rocket)
     }
 }

@@ -30,7 +30,7 @@ extension RouterImpl: Router {
     func setRootModule(_ module: Presentable, hideBar: Bool) {
         let controller = module.toPresent
         rootController.viewControllers = [controller]
-        rootController.isNavigationBarHidden = hideBar
+        hideNavigationBar(hideBar)
     }
     
     func present(_ module: Presentable, animated: Bool) {
@@ -57,11 +57,12 @@ extension RouterImpl: Router {
         rootController.dismiss(animated: animated, completion: completion)
     }
     
-    func push(_ module: Presentable, animated: Bool) {
+    func push(_ module: Presentable, animated: Bool, hideBar: Bool) {
         let controller = module.toPresent
         guard !(controller.isNavigationController) else {
             fatalError("The module must be of type UIViewController, not UINavigationController")
         }
+        hideNavigationBar(hideBar)
         rootController.pushViewController(controller, animated: animated)
     }
     
@@ -71,5 +72,9 @@ extension RouterImpl: Router {
     
     func popToRootModule(animated: Bool) {
         rootController.popToRootViewController(animated: animated)
+    }
+    
+    func hideNavigationBar(_ hide: Bool) {
+        rootController.isNavigationBarHidden = hide
     }
 }

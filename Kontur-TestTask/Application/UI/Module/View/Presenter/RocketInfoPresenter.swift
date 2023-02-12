@@ -14,6 +14,7 @@ protocol RocketInfoPresenter: AnyObject {
     func sectionTypeForSection(at index: Int) -> RocketInfoSection?
     
     func openSettings()
+    func openLaunches()
     
     func viewModelForRocketHeader() -> RocketHeaderCellViewModel
     func viewModelForSpecificationCell(at indexPath: IndexPath) -> RocketSpecificationCellViewModel?

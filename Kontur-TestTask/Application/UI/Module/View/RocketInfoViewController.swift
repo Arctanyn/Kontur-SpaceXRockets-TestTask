@@ -66,6 +66,17 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
         return collectionView
     }()
     
+    //MARK: - View Controller Lyfecycle
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        rocketInfoCollectionView.scrollToItem(
+            at: IndexPath(item: 0, section: 0),
+            at: .top,
+            animated: false
+        )
+    }
+    
     //MARK: - Overrided Methods
     
     override func setupSubviews() {
@@ -87,6 +98,7 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
 
 @objc private extension RocketInfoViewController {
     func showLaunches() {
+        presenter.openLaunches()
     }
     
     func openSettings() {

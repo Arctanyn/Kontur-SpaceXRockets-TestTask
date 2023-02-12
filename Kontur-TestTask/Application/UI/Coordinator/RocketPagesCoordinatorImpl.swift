@@ -32,7 +32,10 @@ final class RocketPagesCoordinatorImpl: BaseCoordinator, RocketPagesCoordinator 
     //MARK: - Methods
     
     override func start(with item: Any?) {
-        let module = assemblyBuilder.createRocketPagesModule(viewControllers: navigationControllers, coordinator: self)
+        let module = assemblyBuilder.createRocketPagesModule(
+            viewControllers: navigationControllers,
+            coordinator: self
+        )
         router.setRootModule(module, hideBar: true)
     }
     
@@ -52,9 +55,24 @@ final class RocketPagesCoordinatorImpl: BaseCoordinator, RocketPagesCoordinator 
 private extension RocketPagesCoordinatorImpl {
     func runRocketPageFlow(with rocket: Rocket, navigationController: UINavigationController) {
         let router = RouterImpl(rootController: navigationController)
-        let coordinator = coordinatorsFactory.createRocketInfoCoordinator(router: router)
+
+        let coordinator = coordinatorsFactory.createRocketInfoCoordinator(router: router) { [weak self] rocket in
+            self?.runLaunchesFlow(rocket: rocket)
+        }
+        
         coordinator.finishFlow = { [weak self] in
             self?.childDidFinish(coordinator)
+        }
+        
+        addChild(coordinator)
+        coordinator.start(with: rocket)
+    }
+    
+    func runLaunchesFlow(rocket: Rocket) {
+        let coordinator = coordinatorsFactory.createLaunchesCoordinator(router: router)
+        coordinator.finishFlow = { [weak self] in
+            self?.childDidFinish(coordinator)
+            self?.router.hideNavigationBar(true)
         }
         addChild(coordinator)
         coordinator.start(with: rocket)

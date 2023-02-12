@@ -48,4 +48,16 @@ final class AssemblyuBuilderImpl: AssemblyBuilder {
         )
         return view
     }
+    
+    func createLaunchesModule(rocket: Rocket, coordinator: LaunchesCoordinator) -> any PresentableView {
+        let view = LaunchesViewController()
+        view.presenter = LaunchesPresenterImpl(
+            view: view,
+            rocket: rocket,
+            rocketAPIService: di.rocketAPIService,
+            dataDecoder: di.dataDecoder,
+            coordinator: coordinator
+        )
+        return view
+    }
 }
