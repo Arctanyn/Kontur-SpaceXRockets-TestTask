@@ -10,6 +10,7 @@ import Foundation
 protocol LaunchesPresenter: AnyObject {
     var numberOfLaunches: Int { get }
     var rocketName: String { get }
+    func fetchLaunches() async
     func viewModelForLauchCell(at indexPath: IndexPath) -> LaunchCellViewModel
     func finishFlow()
 }

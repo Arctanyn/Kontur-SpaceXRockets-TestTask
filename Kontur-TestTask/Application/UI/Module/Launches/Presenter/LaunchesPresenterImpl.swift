@@ -18,6 +18,7 @@ final class LaunchesPresenterImpl {
     private let coordinator: LaunchesCoordinator
     
     private var launches = [RocketLaunch]()
+    private var fetchLaunchesTask: Task<Void, Never>?
     
     //MARK: - Initialization
     
@@ -32,7 +33,7 @@ final class LaunchesPresenterImpl {
         self.dataDecoder = dataDecoder
         self.coordinator = coordinator
         
-        Task {
+        fetchLaunchesTask = Task {
             await fetchLaunches()
         }
     }
@@ -41,18 +42,6 @@ final class LaunchesPresenterImpl {
 //MARK: - Private methods
 
 private extension LaunchesPresenterImpl {
-    @MainActor
-    func fetchLaunches() async {
-        do {
-            let launchesData = try await rocketAPIService.getRocketLaunches()
-            launches = try dataDecoder.decode(data: launchesData, to: [RocketLaunch].self)
-            await filterLaunches(by: rocket.id)
-            view.reloadData()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     func filterLaunches(by rocketId: String) async {
         self.launches = launches.filter { $0.rocket == rocket.id }
     }
@@ -67,10 +56,37 @@ extension LaunchesPresenterImpl: LaunchesPresenter {
     
     func viewModelForLauchCell(at indexPath: IndexPath) -> LaunchCellViewModel {
         let launch = launches[indexPath.item]
-        return LaunchCellViewModel(name: launch.name, date: launch.dateLocal, success: launch.success ?? false)
+        var launchDate = String()
+        
+        if let date = launch.dateLocal.convertToDate(format: "yyyy-MM-dd'T'HH:mm:ssZ") {
+            launchDate = date.toString(format: "MMM d, yyyy")
+        }
+        
+        return LaunchCellViewModel(name: launch.name, date: launchDate, success: launch.success ?? false)
     }
     
+    @MainActor
+    func fetchLaunches() async {
+        view.startLoadingIndicator()
+        do {
+            let launchesData = try await rocketAPIService.getRocketLaunches()
+            launches = try dataDecoder.decode(data: launchesData, to: [RocketLaunch].self)
+            await filterLaunches(by: rocket.id)
+            
+            if launches.isEmpty {
+                view.displayLaunchesAbsence()
+            } else {
+                view.reloadData()
+            }
+        } catch {
+            view.showErrorAlert(description: error.localizedDescription)
+        }
+        view.stopLoadingIndicator()
+    }
+    
+
     func finishFlow() {
+        fetchLaunchesTask?.cancel()
         coordinator.finishFlow?()
     }
 }

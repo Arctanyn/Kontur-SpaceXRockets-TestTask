@@ -41,13 +41,14 @@ final class RocketPagesPresenterImpl {
 private extension RocketPagesPresenterImpl {
     @MainActor
     func fetchRocketsData() async {
+        view.startLoadingIndicator()
         do {
             async let rocketData = try rocketAPIService.getRockets()
             rockets = try await dataDecoder.decode(data: rocketData, to: [Rocket].self)
-            view.stopLoadingIndicator()
         } catch {
             view.showErrorAlert(description: error.localizedDescription)
         }
+        view.stopLoadingIndicator()
     }
 }
  
@@ -56,7 +57,6 @@ private extension RocketPagesPresenterImpl {
 extension RocketPagesPresenterImpl: RocketPagesPresenter {
     @MainActor
     func fetchRocketsInfo() async {
-        view.startLoadingInficator()
         await fetchRocketsData()
         coordinator.showRockets(rockets)
     }

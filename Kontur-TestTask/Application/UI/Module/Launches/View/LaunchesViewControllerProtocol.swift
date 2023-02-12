@@ -7,6 +7,9 @@
 
 import UIKit
 
-protocol LaunchesViewControllerProtocol: AnyObject where Self: UIViewController {
+protocol LaunchesViewControllerProtocol: LoadingIndicatorManagementProtocol where Self: UIViewController {
     func reloadData()
+    func displayLaunchesAbsence()
+    func showErrorAlert(description: String)
 }
+

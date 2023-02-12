@@ -88,6 +88,8 @@
 		949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */; };
 		949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */; };
 		949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */; };
+		94AAB7A6299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB7A5299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift */; };
+		94AAB7A8299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB7A7299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift */; };
 		94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC622992A1390088080C /* RockeHeaderView.swift */; };
 		94E6DC652992A1540088080C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC642992A1540088080C /* BaseView.swift */; };
 		94E6DC672992AE460088080C /* RocketHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */; };
@@ -202,6 +204,8 @@
 		949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSpecificationCollectionViewCell.swift; sourceTree = "<group>"; };
 		949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
 		949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		94AAB7A5299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorManagementProtocol.swift; sourceTree = "<group>"; };
+		94AAB7A7299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView + Ext.swift"; sourceTree = "<group>"; };
 		94E6DC622992A1390088080C /* RockeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockeHeaderView.swift; sourceTree = "<group>"; };
 		94E6DC642992A1540088080C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 				949DFE042992599600BE27A7 /* UICollectionViewCell + Ext.swift */,
 				94E6DC682992C1210088080C /* UIViewController + Ext.swift */,
 				94E704502997F7F900A9C684 /* Int + Ext.swift */,
+				94AAB7A7299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift */,
 			);
 			path = "UIKit + Ext";
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				94113ADB2991555500D72AA4 /* BaseViewSetup.swift */,
 				94113AEA2991699100D72AA4 /* PresentableView.swift */,
 				94E7043D2997B7AF00A9C684 /* Unit.swift */,
+				94AAB7A5299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -816,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943BF80329900B3900B7F3C6 /* Failure.swift in Sources */,
+				94AAB7A8299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift in Sources */,
 				94113ADC2991555500D72AA4 /* BaseViewSetup.swift in Sources */,
 				943BF7C3298FF47700B7F3C6 /* RocketAPIService.swift in Sources */,
 				940EF8F5299417A6008D28AC /* DataDecoder.swift in Sources */,
@@ -860,6 +867,7 @@
 				943BF80229900B3900B7F3C6 /* Flickr.swift in Sources */,
 				9463C23A2996B6E000143193 /* String + Ext.swift in Sources */,
 				9463C2362996B60400143193 /* Date + Ext.swift in Sources */,
+				94AAB7A6299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift in Sources */,
 				94E6DC712992CCE00088080C /* SettingsButton.swift in Sources */,
 				943BF7FF29900B3900B7F3C6 /* Fairings.swift in Sources */,
 				94113AD8299154A200D72AA4 /* UIView + Ext.swift in Sources */,

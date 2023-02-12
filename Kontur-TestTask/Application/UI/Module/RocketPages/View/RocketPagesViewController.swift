@@ -19,12 +19,7 @@ final class RocketPagesViewController: UIPageViewController, PresentableView {
     
     //MARK: - Views
     
-    private lazy var loadingIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.frame = CGRect(origin: .zero, size: .zero)
-        activityIndicator.hidesWhenStopped = true
-        return activityIndicator
-    }()
+    private lazy var loadingIndicator = UIActivityIndicatorView.loadingIndicator
     
     //MARK: - Initialization
     
@@ -80,7 +75,7 @@ extension RocketPagesViewController {
 //MARK: - RocketPagesViewControllerProtocol
 
 extension RocketPagesViewController: RocketPagesViewControllerProtocol {
-    func startLoadingInficator() {
+    func startLoadingIndicator() {
         loadingIndicator.startAnimating()
     }
     

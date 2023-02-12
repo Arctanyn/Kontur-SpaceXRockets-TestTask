@@ -7,8 +7,6 @@
 
 import UIKit
 
-protocol RocketPagesViewControllerProtocol: AnyObject where Self: UIViewController {
-    func startLoadingInficator()
-    func stopLoadingIndicator()
+protocol RocketPagesViewControllerProtocol: LoadingIndicatorManagementProtocol where Self: UIViewController {
     func showErrorAlert(description: String)
 }

@@ -14,8 +14,20 @@ final class LaunchesViewController: BaseViewController, PresentableView {
     //MARK: Properties
     
     var presenter: Presenter!
+    private var fetchLaunchesTask: Task<Void, Never>?
     
     //MARK: - Views
+    
+    private lazy var loadingIndicator = UIActivityIndicatorView.loadingIndicator
+    
+    private lazy var noResultsLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 20, weight: .medium)
+        label.textAlignment = .center
+        label.textColor = .white
+        label.text = "No information about launches"
+        return label
+    }()
     
     private lazy var launchesCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
@@ -34,6 +46,11 @@ final class LaunchesViewController: BaseViewController, PresentableView {
         presenter.finishFlow()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        fetchLaunchesTask?.cancel()
+    }
+    
     //MARK: - Overrided Methods
     
     override func configureAppearance() {
@@ -42,12 +59,20 @@ final class LaunchesViewController: BaseViewController, PresentableView {
     }
     
     override func setupSubviews() {
-        view.addSubview(launchesCollectionView, useAutoLayout: true)
-        launchesCollectionView.dataSource = self
+        setupCollectionView()
+        setupNoResultsLabel()
+        view.addSubview(loadingIndicator, useAutoLayout: true)
     }
     
     override func makeSubviewsLayout() {
         NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            noResultsLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            noResultsLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            noResultsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
             launchesCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             launchesCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             launchesCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -85,6 +110,16 @@ private extension LaunchesViewController {
         
         return UICollectionViewCompositionalLayout(section: section)
     }
+    
+    func setupCollectionView() {
+        view.addSubview(launchesCollectionView, useAutoLayout: true)
+        launchesCollectionView.dataSource = self
+    }
+    
+    func setupNoResultsLabel() {
+        view.addSubview(noResultsLabel, useAutoLayout: true)
+        noResultsLabel.isHidden = true
+    }
 }
 
 //MARK: - LaunchesViewControllerProtocol
@@ -92,6 +127,37 @@ private extension LaunchesViewController {
 extension LaunchesViewController: LaunchesViewControllerProtocol {
     func reloadData() {
         launchesCollectionView.reloadData()
+    }
+    
+    func displayLaunchesAbsence() {
+        launchesCollectionView.isHidden = true
+        noResultsLabel.isHidden = false
+    }
+    
+    func startLoadingIndicator() {
+        loadingIndicator.startAnimating()
+    }
+    
+    func stopLoadingIndicator() {
+        loadingIndicator.stopAnimating()
+    }
+    
+    func showErrorAlert(description: String) {
+        let alert = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(title: "OK", style: .cancel)
+        )
+        
+        alert.addAction(
+            UIAlertAction(title: "Try again", style: .default) { [weak self] _ in
+                self?.fetchLaunchesTask = Task {
+                    await self?.presenter.fetchLaunches()
+                }
+            }
+        )
+        
+        present(alert, animated: true)
     }
 }
 
