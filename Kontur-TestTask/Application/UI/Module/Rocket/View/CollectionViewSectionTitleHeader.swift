@@ -1,5 +1,5 @@
 //
-//  CollectionViewHeaderReusableView.swift
+//  CollectionViewSectionTitleHeader.swift
 //  Kontur-TestTask
 //
 //  Created by Малиль Дугулюбгов on 07.02.2023.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class CollectionViewHeaderReusableView: UICollectionReusableView {
+final class CollectionViewSectionTitleHeader: UICollectionReusableView {
     
-    static let identifier = String(describing: CollectionViewHeaderReusableView.self)
+    static let identifier = String(describing: CollectionViewSectionTitleHeader.self)
     
     //MARK: - Views
     
@@ -41,7 +41,7 @@ final class CollectionViewHeaderReusableView: UICollectionReusableView {
 
 //MARK: - ViewUISetupProtocol
 
-extension CollectionViewHeaderReusableView: ViewUISetupProtocol {
+extension CollectionViewSectionTitleHeader: ViewUISetupProtocol {
     func configureAppearance() { }
     
     func setupSubviews() {

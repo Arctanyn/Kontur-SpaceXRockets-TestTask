@@ -86,11 +86,11 @@
 		949DFE0A2992791200BE27A7 /* RocketStageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE092992791200BE27A7 /* RocketStageCollectionViewCell.swift */; };
 		949DFE0D2992793700BE27A7 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */; };
 		949DFE0F29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */; };
-		949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */; };
+		949DFE122992857D00BE27A7 /* CollectionViewSectionTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE112992857D00BE27A7 /* CollectionViewSectionTitleHeader.swift */; };
 		949DFE142992912100BE27A7 /* RocketInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */; };
 		94AAB7A6299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB7A5299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift */; };
 		94AAB7A8299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB7A7299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift */; };
-		94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC622992A1390088080C /* RockeHeaderView.swift */; };
+		94E6DC632992A1390088080C /* RocketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC622992A1390088080C /* RocketHeaderView.swift */; };
 		94E6DC652992A1540088080C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC642992A1540088080C /* BaseView.swift */; };
 		94E6DC672992AE460088080C /* RocketHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */; };
 		94E6DC692992C1210088080C /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E6DC682992C1210088080C /* UIViewController + Ext.swift */; };
@@ -202,11 +202,11 @@
 		949DFE092992791200BE27A7 /* RocketStageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStageCollectionViewCell.swift; sourceTree = "<group>"; };
 		949DFE0C2992793700BE27A7 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		949DFE0E29927D4A00BE27A7 /* RocketSpecificationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSpecificationCollectionViewCell.swift; sourceTree = "<group>"; };
-		949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
+		949DFE112992857D00BE27A7 /* CollectionViewSectionTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionTitleHeader.swift; sourceTree = "<group>"; };
 		949DFE132992912100BE27A7 /* RocketInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		94AAB7A5299932A40049C0E6 /* LoadingIndicatorManagementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorManagementProtocol.swift; sourceTree = "<group>"; };
 		94AAB7A7299934E50049C0E6 /* UIActivityIndicatorView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView + Ext.swift"; sourceTree = "<group>"; };
-		94E6DC622992A1390088080C /* RockeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockeHeaderView.swift; sourceTree = "<group>"; };
+		94E6DC622992A1390088080C /* RocketHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHeaderView.swift; sourceTree = "<group>"; };
 		94E6DC642992A1540088080C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		94E6DC662992AE460088080C /* RocketHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		94E6DC682992C1210088080C /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
@@ -291,8 +291,8 @@
 		94113AE329915A0000D72AA4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				94113AE1299159F100D72AA4 /* RocketInfoPresenterImpl.swift */,
 				94113AE429915A4700D72AA4 /* RocketInfoPresenter.swift */,
+				94113AE1299159F100D72AA4 /* RocketInfoPresenterImpl.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -304,16 +304,6 @@
 				943BF7A6298FF24800B7F3C6 /* RocketInfoViewController.swift */,
 				94113AE829915B5200D72AA4 /* RocketViewControllerProtocol.swift */,
 			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		94113AE729915AF300D72AA4 /* RocketInfo */ = {
-			isa = PBXGroup;
-			children = (
-				94113AE629915AE200D72AA4 /* View */,
-				94113AE329915A0000D72AA4 /* Presenter */,
-			);
-			name = RocketInfo;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -398,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				94E6DC7E2992DA240088080C /* RocketPages */,
-				94113AE729915AF300D72AA4 /* RocketInfo */,
+				9456594A29B66B64002322F6 /* Rocket */,
 				9485E34E2998087900FCE2F6 /* Launches */,
 				94E704342997B38D00A9C684 /* Settings */,
 			);
@@ -530,6 +520,15 @@
 			path = RocketLaunch;
 			sourceTree = "<group>";
 		};
+		9456594A29B66B64002322F6 /* Rocket */ = {
+			isa = PBXGroup;
+			children = (
+				94113AE629915AE200D72AA4 /* View */,
+				94113AE329915A0000D72AA4 /* Presenter */,
+			);
+			path = Rocket;
+			sourceTree = "<group>";
+		};
 		9463C2432996D75D00143193 /* Unit */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,9 +654,9 @@
 		94E6DC602992A04D0088080C /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				949DFE112992857D00BE27A7 /* CollectionViewHeaderReusableView.swift */,
-				94E6DC622992A1390088080C /* RockeHeaderView.swift */,
 				949DFE08299278E100BE27A7 /* CollectionViewCell */,
+				949DFE112992857D00BE27A7 /* CollectionViewSectionTitleHeader.swift */,
+				94E6DC622992A1390088080C /* RocketHeaderView.swift */,
 			);
 			name = CollectionView;
 			sourceTree = "<group>";
@@ -903,7 +902,7 @@
 				94E704472997C83300A9C684 /* SettingsCoordinatorImpl.swift in Sources */,
 				943BF7F22990046E00B7F3C6 /* HttpError.swift in Sources */,
 				943BF7D3298FF82300B7F3C6 /* LandingLegs.swift in Sources */,
-				949DFE122992857D00BE27A7 /* CollectionViewHeaderReusableView.swift in Sources */,
+				949DFE122992857D00BE27A7 /* CollectionViewSectionTitleHeader.swift in Sources */,
 				943BF80629902A0300B7F3C6 /* URLBuilder.swift in Sources */,
 				949269452993C5320066E5E1 /* ApplicationCoordinator.swift in Sources */,
 				94E6DC6D2992CA5C0088080C /* SettingsOptions.swift in Sources */,
@@ -926,7 +925,7 @@
 				94E7043C2997B56F00A9C684 /* BaseTableViewCell.swift in Sources */,
 				94E7044B2997D24B00A9C684 /* Settings.swift in Sources */,
 				94E6DC742992D2B20088080C /* RocketHeaderCellViewModel.swift in Sources */,
-				94E6DC632992A1390088080C /* RockeHeaderView.swift in Sources */,
+				94E6DC632992A1390088080C /* RocketHeaderView.swift in Sources */,
 				94E6DC792992D3310088080C /* RocketSpecificationCellViewModel.swift in Sources */,
 				94113AE929915B5200D72AA4 /* RocketViewControllerProtocol.swift in Sources */,
 				949269392993C3650066E5E1 /* Presentable.swift in Sources */,

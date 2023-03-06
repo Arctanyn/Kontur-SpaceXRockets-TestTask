@@ -23,7 +23,7 @@ final class RocketHeaderCollectionViewCell: BaseCollectionViewCell {
     
     //MARK: - Views
     
-    private let rocketHeaderView = RockeHeaderView()
+    private let rocketHeaderView = RocketHeaderView()
     
     private lazy var rocketImageView: AsyncImageView = {
         let imageView = AsyncImageView(url: nil)

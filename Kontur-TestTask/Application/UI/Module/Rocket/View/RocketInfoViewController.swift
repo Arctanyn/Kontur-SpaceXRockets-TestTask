@@ -39,9 +39,9 @@ final class RocketInfoViewController: BaseViewController, PresentableView {
         collectionView.showsHorizontalScrollIndicator = false
  
         collectionView.register(
-            CollectionViewHeaderReusableView.self,
+            CollectionViewSectionTitleHeader.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: CollectionViewHeaderReusableView.identifier
+            withReuseIdentifier: CollectionViewSectionTitleHeader.identifier
         )
         
         collectionView.register(RocketHeaderCollectionViewCell.self, forCellWithReuseIdentifier: RocketHeaderCollectionViewCell.identifier)
@@ -301,9 +301,9 @@ extension RocketInfoViewController: UICollectionViewDataSource {
         case UICollectionView.elementKindSectionHeader:
             let view = collectionView.dequeueReusableSupplementaryView(
                 ofKind: UICollectionView.elementKindSectionHeader,
-                withReuseIdentifier: CollectionViewHeaderReusableView.identifier,
+                withReuseIdentifier: CollectionViewSectionTitleHeader.identifier,
                 for: indexPath
-            ) as! CollectionViewHeaderReusableView
+            ) as! CollectionViewSectionTitleHeader
             view.setTitle(rocketInfoSection.title)
             return view
         default:
