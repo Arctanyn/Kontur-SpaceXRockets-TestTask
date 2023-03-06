@@ -613,8 +613,8 @@
 		949269482993CA6F0066E5E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */,
 				9492694E2993CB630066E5E1 /* RocketPagesViewControllerProtocol.swift */,
+				94E6DC7F2992DA450088080C /* RocketPagesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
