@@ -1,4 +1,4 @@
-# iOS Developer's Test Task
+# iOS Developer Test Task
 Test assignment for an internship at the Kontur company  
 The original description of this task [here](https://github.com/Arctanyn/Kontur-TestTask/files/10716439/iOS.pdf)  
 
